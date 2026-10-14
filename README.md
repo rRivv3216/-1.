@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>منصة الكيمياء التفاعلية v3.1</title>
+<title>منصة الكيمياء التفاعلية v3.2</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -474,7 +474,7 @@ input:checked + .slider:before{transform:translateX(24px)}
 <canvas id="bg-canvas"></canvas>
 <div class="bg-gradient-overlay"></div>
 
-<!-- Auth -->
+<!-- Auth Screen -->
 <div class="auth-screen active" id="auth">
   <div class="auth-container">
     <div class="auth-logo"><i class="fas fa-atom"></i></div>
@@ -695,19 +695,18 @@ input:checked + .slider:before{transform:translateX(24px)}
             <div class="element-info-title"><h2>المقدمة والمبادئ الكيميائية الحيوية</h2><p>الأساس الذري لوظائف الجسم الحيوية</p></div>
           </div>
           <div class="subsection">
-            <h4><i class="fas fa-info-circle"></i> المقدمة والأهمية الكيميائية الحيوية</h4>
-            <p>لا تعتمد وظائف جسم الإنسان الحيوية على وجود المركبات العضوية الكبرى وحدها، مثل البروتينات، الكربوهيدرات، والدهون، بل تعتمد اعتماداً كلياً على عناصر كيميائية تمتلك خصائص ذرية وإلكترونية فريدة تجعلها ضرورية لحدوث تفاعلات حيوية محددة لا يمكن بدونها استمرار الحياة.</p>
-            <p>وتكمن أهمية هذه العناصر الكيميائية في قدرتها على تكوين الأيونات النشطة، والارتباط الانتقائي بالجزيئات الحيوية، وتغيير طاقة التنشيط وسرعة التفاعلات الكيميائية عبر التحفيز الإنزيمي، بالإضافة إلى المشاركة المباشرة في سلاسل انتقال الإلكترونات وتثبيت التراكيب الفراغية ثلاثية الأبعاد للبروتينات والأحماض النووية.</p>
+            <h4><i class="fas fa-info-circle"></i> المقدمة والأهمية</h4>
+            <p>لا تعتمد وظائف جسم الإنسان على المركبات العضوية الكبرى وحدها، مثل البروتينات والكربوهيدرات والدهون، بل تعتمد اعتماداً كلياً على عناصر كيميائية تمتلك خصائص ذرية وإلكترونية فريدة تجعلها ضرورية لحدوث تفاعلات حيوية محددة.</p>
+            <p>وتكمن أهمية هذه العناصر في قدرتها على تكوين الأيونات النشطة، والارتباط الانتقائي بالجزيئات الحيوية، وتغيير طاقة التنشيط وسرعة التفاعلات عبر التحفيز الإنزيمي، بالإضافة إلى المشاركة المباشرة في سلاسل انتقال الإلكترونات وتثبيت التراكيب الفراغية ثلاثية الأبعاد للبروتينات والأحماض النووية.</p>
           </div>
           <div class="subsection">
-            <h4><i class="fas fa-microscope"></i> الرؤية الكيميائية الحيوية للعناصر</h4>
-            <p>من منظور الكيمياء الحيوية، لا تتساوى العناصر في طريقة عملها داخل الجسم؛ فالحديد يستطيع التناوب بين حالات أكسدة متعددة ليشارك في نقل الإلكترونات والأكسجين، بينما يمتاز الزنك بقدرته على تكوين روابط تناسقية ثابتة الجزيئات، ويمتلك المغنيسيوم ألفة عالية لمجموعات الفوسفات السالبة في جزيئات ATP، بينما يدخل اليود بصورة بنيوية دائمة في تركيب الهرمونات، ويشكل السيلينيوم مركزاً حافزاً فريداً في إنزيمات مضادات الأكسدة.</p>
+            <h4><i class="fas fa-microscope"></i> الرؤية الكيميائية الحيوية</h4>
+            <p>من منظور الكيمياء الحيوية، لا تتساوى العناصر في طريقة عملها؛ فالحديد يستطيع التناوب بين حالات أكسدة متعددة ليشارك في نقل الإلكترونات والأكسجين، بينما يمتاز الزنك بقدرته على تكوين روابط تناسقية ثابتة، ويمتلك المغنيسيوم ألفة عالية لمجموعات الفوسفات السالبة في ATP، بينما يدخل اليود بصورة بنيوية دائمة في تركيب الهرمونات، ويشكل السيلينيوم مركزاً حافزاً في إنزيمات مضادات الأكسدة.</p>
           </div>
           <div class="subsection">
-            <h4><i class="fas fa-cogs"></i> المبادئ الكيميائية الحيوية الحاكمة للعناصر</h4>
-            <p>تخضع كافة العناصر الكيميائية في جسم الإنسان لمجموعة من القواعد الفيزيوكيميائية التي تحدد نمط وظيفتها داخل الخلايا:</p>
-            <div class="info-box info"><h5><i class="fas fa-bolt"></i> 1. جهد الأكسدة والاختزال (Redox Potential)</h5><p>تحديد قدرة العنصر على اكتساب أو فقد الإلكترونات بمرونة دون إحداث إجهاد تأكسدي عشوائي.</p></div>
-            <div class="info-box purple"><h5><i class="fas fa-cube"></i> 2. الهندسة التناسقية (Coordination Geometry)</h5><p>شكل الروابط الفراغية التي يشكلها أيون الفلز مع المجموعات العضوية المحيطة به داخل الموقع النشط.</p></div>
+            <h4><i class="fas fa-cogs"></i> المبادئ الحاكمة</h4>
+            <div class="info-box info"><h5><i class="fas fa-bolt"></i> 1. جهد الأكسدة والاختزال (Redox Potential)</h5><p>تحديد قدرة العنصر على اكتساب أو فقد الإلكترونات بمرونة.</p></div>
+            <div class="info-box purple"><h5><i class="fas fa-cube"></i> 2. الهندسة التناسقية (Coordination Geometry)</h5><p>شكل الروابط الفراغية التي يشكلها أيون الفلز مع المجموعات العضوية.</p></div>
           </div>
         </div>
 
@@ -717,33 +716,32 @@ input:checked + .slider:before{transform:translateX(24px)}
             <div class="element-info-title"><h2>أولاً: الحديد (Fe) — كيمياء الأكسجين وانتقال الإلكترونات</h2><p>العدد الذري: 26 | الوزن الذري: 55.84</p></div>
           </div>
           <div class="subsection">
-            <h4><i class="fas fa-atom"></i> 1. الخصائص الكيميائية والذرية للحديد</h4>
-            <p>الحديد عنصر فلزي انتقالي (Transition Metal) ينتمي للسلسلة الانتقالية الأولى، وعدده الذري 26. يتميز بقابليته لفقد إلكترونات من 4s و 3d، مما يمنحه القدرة على الوجود في حالتي أكسدة:</p>
+            <h4><i class="fas fa-atom"></i> 1. الخصائص الكيميائية</h4>
+            <p>الحديد عنصر فلزي انتقالي، عدده الذري 26. يتميز بقابليته لفقد إلكترونات من 4s و 3d، مما يمنحه القدرة على الوجود في حالتي أكسدة:</p>
             <ul>
               <li><strong>الحديد الثنائي (Fe²⁺):</strong> تفاعلي وقابل للذوبان، الصورة الرئيسية في الارتباط بالأكسجين.</li>
               <li><strong>الحديد الثلاثي (Fe³⁺):</strong> الأكثر استقراراً في الوسط الأكسجيني، صورة التخزين.</li>
             </ul>
           </div>
           <div class="subsection">
-            <h4><i class="fas fa-lungs"></i> 2. آلية نقل الأكسجين عبر حلقة الهيم والهيموغلوبين</h4>
+            <h4><i class="fas fa-lungs"></i> 2. آلية نقل الأكسجين عبر الهيم</h4>
             <p>يتم احتجاز الحديد داخل الهيم (Heme)، الذي يتكون من حلقة بورفيرين (Porphyrin) تتوسطها ذرة حديد مرابطة بأربع روابط تناسقية مع ذرات نيتروجين.</p>
             <div class="info-box info"><h5><i class="fas fa-droplet"></i> التكامل الجزيئي</h5><p>تتيح البيئة الفراغية للهيموغلوبين بذرة الحديد (Fe²⁺) تكوين رابطة سادسة مع O₂، فيلتقطه في الرئتين ويطلقه في الأنسجة.</p></div>
           </div>
           <div class="subsection">
             <h4><i class="fas fa-exclamation-triangle"></i> 3. الخطورة التأكسدية وتفاعل فنتون</h4>
-            <p>على الرغم من أهميته، يمثل الحديد الحر خطراً على الخلية عبر تفاعل فنتون:</p>
             <div class="formula-box">Fe²⁺ + H₂O₂ → Fe³⁺ + OH⁻ + •OH</div>
-            <div class="info-box danger"><h5><i class="fas fa-radiation"></i> خطر جذر الهيدروكسيل (•OH)</h5><p>جذر الهيدروكسيل يدمر الأغشية الخلوية والـ DNA. لذلك نظم الجسم بروتينات خاصة للتخزين (فيريتين) والنقل (ترانسفيرين).</p></div>
+            <div class="info-box danger"><h5><i class="fas fa-radiation"></i> خطر جذر الهيدروكسيل (•OH)</h5><p>يدمر الأغشية الخلوية والـ DNA. لذلك نظم الجسم بروتينات للتخزين (فيريتين) والنقل (ترانسفيرين).</p></div>
           </div>
         </div>
 
         <div class="research-section" id="res-zn">
           <div class="section-header-element element-zn" onclick="openElement3D(30)">
             <div class="element-badge">Zn</div>
-            <div class="element-info-title"><h2>ثانياً: الزنك (Zn) — عنصر التثبيت البنيوي والتحفيز الإنزيمي</h2><p>العدد الذري: 30 | عنصر فلزي انتقالي</p></div>
+            <div class="element-info-title"><h2>ثانياً: الزنك (Zn) — التثبيت البنيوي والتحفيز الإنزيمي</h2><p>العدد الذري: 30</p></div>
           </div>
           <div class="subsection">
-            <h4><i class="fas fa-atom"></i> 1. الخصائص الكيميائية للزنك</h4>
+            <h4><i class="fas fa-atom"></i> 1. الخصائص الكيميائية</h4>
             <p>يوجد الزنك حصرياً على صورة أيون Zn²⁺. يمتلك غلافاً إلكترونياً كاملاً (d10)، مما جعله خافتاً تأكسدياً ولا يشارك في تفاعلات الأكسدة المباشرة.</p>
           </div>
           <div class="subsection">
@@ -753,7 +751,6 @@ input:checked + .slider:before{transform:translateX(24px)}
           </div>
           <div class="subsection">
             <h4><i class="fas fa-cog"></i> 3. الأنهيدراز الكربوني</h4>
-            <p>يعمل Zn²⁺ كحمض لويس قوي في أكثر من 300 إنزيم. مثال:</p>
             <div class="formula-box">CO₂ + H₂O ⇌ HCO₃⁻ + H⁺</div>
           </div>
         </div>
@@ -761,11 +758,11 @@ input:checked + .slider:before{transform:translateX(24px)}
         <div class="research-section" id="res-mg">
           <div class="section-header-element element-mg" onclick="openElement3D(12)">
             <div class="element-badge">Mg</div>
-            <div class="element-info-title"><h2>ثالثاً: المغنيسيوم (Mg) — عنصر نقل الطاقة والاستقرار الجيني</h2><p>العدد الذري: 12 | الوزن الذري: 24.30</p></div>
+            <div class="element-info-title"><h2>ثالثاً: المغنيسيوم (Mg) — نقل الطاقة والاستقرار الجيني</h2><p>العدد الذري: 12</p></div>
           </div>
           <div class="subsection">
-            <h4><i class="fas fa-atom"></i> 1. الخصائص الكيميائية للمغنيسيوم</h4>
-            <p>فلز من الفلزات القلوية الترابية (Group 2)، يوجد على هيئة Mg²⁺. يمتلك كثافة شحنة عالية جداً وألفة قوية لمجموعات الفوسفات السالبة.</p>
+            <h4><i class="fas fa-atom"></i> 1. الخصائص الكيميائية</h4>
+            <p>فلز من الفلزات القلوية الترابية، يوجد على هيئة Mg²⁺. يمتلك كثافة شحنة عالية جداً وألفة قوية لمجموعات الفوسفات السالبة.</p>
           </div>
           <div class="subsection">
             <h4><i class="fas fa-bolt"></i> 2. معقد Mg-ATP</h4>
@@ -777,40 +774,34 @@ input:checked + .slider:before{transform:translateX(24px)}
         <div class="research-section" id="res-i">
           <div class="section-header-element element-i" onclick="openElement3D(53)">
             <div class="element-badge">I</div>
-            <div class="element-info-title"><h2>رابعاً: اليود (I) — عنصر بناء الهرمونات</h2><p>العدد الذري: 53 | الوزن الذري: 126.90</p></div>
+            <div class="element-info-title"><h2>رابعاً: اليود (I) — بناء الهرمونات</h2><p>العدد الذري: 53</p></div>
           </div>
           <div class="subsection">
-            <h4><i class="fas fa-atom"></i> 1. الخصائص الكيميائية لليود</h4>
-            <p>عنصر لا فلزي من الهالوجينات (Group 17). يُلتقط الغذائي على صورة أيون يوديد (I⁻) ويُضخ إلى الغدة الدرقية عبر NIS Membrane Pump.</p>
+            <h4><i class="fas fa-atom"></i> 1. الخصائص الكيميائية</h4>
+            <p>عنصر لا فلزي من الهالوجينات. يُلتقط الغذائي على صورة أيون يوديد (I⁻) ويُضخ إلى الغدة الدرقية.</p>
           </div>
           <div class="subsection">
-            <h4><i class="fas fa-flask"></i> 2. الآلية الإنزيمية لبناء الهرمونات</h4>
-            <p>يدخل اليود في روابط تساهمية كربونية-يودية دائمة داخل هرمونات الغدة الدرقية:</p>
-            <ul>
-              <li>أكسدة I⁻ باستخدام H₂O₂.</li>
-              <li>إدراج اليود في حلقات التيروزين.</li>
-              <li>اقتران لتشكيل هرمونات T₃ أو T₄.</li>
-            </ul>
+            <h4><i class="fas fa-flask"></i> 2. بناء الهرمونات</h4>
+            <p>يدخل اليود في روابط تساهمية كربونية-يودية دائمة داخل هرمونات الغدة الدرقية T₃ و T₄.</p>
           </div>
         </div>
 
         <div class="research-section" id="res-se">
           <div class="section-header-element element-se" onclick="openElement3D(34)">
             <div class="element-badge">Se</div>
-            <div class="element-info-title"><h2>خامساً: السيلينيوم (Se) — درع مضاد الأكسدة</h2><p>العدد الذري: 34 | الوزن الذري: 78.96</p></div>
+            <div class="element-info-title"><h2>خامساً: السيلينيوم (Se) — درع مضاد الأكسدة</h2><p>العدد الذري: 34</p></div>
           </div>
           <div class="subsection">
-            <h4><i class="fas fa-atom"></i> 1. الخصائص الكيميائية للسيلينيوم</h4>
-            <p>يقع في المجموعة السادسة عشرة (Chalcogens). رابطة (Se-H) أكثر حامضية من (S-H). يدمج في الحمض الأميني رقم 21 (سيلينوسيستين).</p>
+            <h4><i class="fas fa-atom"></i> 1. الخصائص الكيميائية</h4>
+            <p>يقع في المجموعة السادسة عشرة. يدمج في الحمض الأميني رقم 21 (سيلينوسيستين).</p>
           </div>
           <div class="subsection">
             <h4><i class="fas fa-shield-virus"></i> 2. إنزيم GPx</h4>
-            <p>يدخل السيلينيوم في إنزيم الجلوتاثيون بيروكسيداز الذي يفكك البيروكسيدات:</p>
             <div class="formula-box">H₂O₂ + 2GSH → 2H₂O + GSSG</div>
           </div>
           <div class="subsection">
             <h4><i class="fas fa-handshake"></i> 3. التكامل مع اليود</h4>
-            <p>إنزيمات Deiodinases (نازعات اليود) إنزيمات سيلينوبروتينية تحوّل T₄ الخامل إلى T₃ النشط.</p>
+            <p>إنزيمات Deiodinases إنزيمات سيلينوبروتينية تحوّل T₄ الخامل إلى T₃ النشط.</p>
           </div>
         </div>
 
@@ -842,7 +833,7 @@ input:checked + .slider:before{transform:translateX(24px)}
             <h3><i class="fas fa-lightbulb"></i> الخاتمة</h3>
             <p>تكشف هذه الدراسة عن حقيقة جوهرية: إن المظاهر الفسيولوجية المعقدة لجسم الإنسان تستند كلياً إلى سلوكيات تفاعلية دقيقة على المستوى الذري والإلكتروني.</p>
             <h3 style="margin-top:18px;"><i class="fas fa-bullseye"></i> التوصيات</h3>
-            <p>نوصي بالتوسع في أبحاث علم الكيمياء التناسقية الحيوية (Bioinorganic Chemistry) لفهم التداخلات المباشرة بين النقص الغذائي والاضطرابات الجزئية.</p>
+            <p>نوصي بالتوسع في أبحاث علم الكيمياء التناسقية الحيوية (Bioinorganic Chemistry).</p>
           </div>
         </div>
 
@@ -852,11 +843,11 @@ input:checked + .slider:before{transform:translateX(24px)}
             <div class="element-info-title"><h2>المراجع العلمية</h2><p>المصادر المعتمدة</p></div>
           </div>
           <ol class="references-list">
-            <li>Rolić, T., et al. (2025). Iron Metabolism, Calcium, Magnesium and Trace Elements: A Review. <em>Biological Trace Element Research</em>. <a href="https://doi.org/10.1007/s12011-024-04289-z" target="_blank">DOI</a></li>
+            <li>Rolić, T., et al. (2025). Iron Metabolism, Calcium, Magnesium and Trace Elements. <em>Biological Trace Element Research</em>.</li>
             <li>Teaching the Chemical Elements in Biochemistry: Elemental Biology and Metallomics. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9303777" target="_blank">Link</a></li>
-            <li>Trace Elements in Human Nutrition (II) – An Update. <a href="https://pmc.ncbi.nlm.nih.gov/articles/6993532" target="_blank">Link</a></li>
+            <li>Trace Elements in Human Nutrition (II). <a href="https://pmc.ncbi.nlm.nih.gov/articles/6993532" target="_blank">Link</a></li>
             <li>Biochemistry, Nutrients. NCBI Bookshelf. <a href="https://www.ncbi.nlm.nih.gov/books/NBK554545" target="_blank">Link</a></li>
-            <li>Essential Metals in Health and Disease. <em>Chemico-Biological Interactions</em>. <a href="https://doi.org/10.1016/j.cbi.2022.110173" target="_blank">DOI</a></li>
+            <li>Essential Metals in Health and Disease. <em>Chemico-Biological Interactions</em>.</li>
           </ol>
         </div>
         <button class="back-to-top" id="back-to-top"><i class="fas fa-chevron-up"></i></button>
@@ -875,7 +866,7 @@ input:checked + .slider:before{transform:translateX(24px)}
       <div class="periodic-container">
         <div class="periodic-legend" id="pt-legend"></div>
         <div class="periodic-grid" id="pt-grid"></div>
-        <div class="pt-info-panel" id="pt-info">👆 اضغط على أي عنصر لعرض نموذج بور ثلاثي الأبعاد ومعلوماته الكاملة</div>
+        <div class="pt-info-panel" id="pt-info">👆 اضغط على أي عنصر لعرض نموذج بور ثلاثي الأبعاد</div>
       </div>
     </div>
 
@@ -899,7 +890,7 @@ input:checked + .slider:before{transform:translateX(24px)}
 
         <div class="calc-panel active" id="calc-molar">
           <h3><i class="fas fa-weight"></i> حاسبة الكتلة المولية</h3>
-          <p class="calc-desc">أدخل الصيغة الكيميائية لحساب الكتلة المولية. مثال: H2SO4, C6H12O6, NaCl</p>
+          <p class="calc-desc">أدخل الصيغة الكيميائية لحساب الكتلة المولية. مثال: H2SO4, C6H12O6</p>
           <div class="calc-form">
             <div class="calc-field"><label>الصيغة الكيميائية</label><input type="text" id="molar-formula" placeholder="H2SO4" value="H2SO4"></div>
             <button class="btn" onclick="calcMolar()"><i class="fas fa-equals"></i> احسب الكتلة المولية</button>
@@ -913,10 +904,10 @@ input:checked + .slider:before{transform:translateX(24px)}
 
         <div class="calc-panel" id="calc-ph">
           <h3><i class="fas fa-flask"></i> حاسبة pH و pOH</h3>
-          <p class="calc-desc">اختر ما تعرفه (تركيز H⁺ أو OH⁻) وسنحسب لك الباقي</p>
+          <p class="calc-desc">اختر ما تعرفه وسنحسب الباقي</p>
           <div class="calc-form">
             <div class="calc-field"><label>نوع القيمة المدخلة</label>
-              <select id="ph-type"><option value="h">تركيز [H⁺] بالمولار</option><option value="oh">تركيز [OH⁻] بالمولار</option><option value="ph">قيمة pH</option><option value="poh">قيمة pOH</option></select>
+              <select id="ph-type"><option value="h">تركيز [H⁺]</option><option value="oh">تركيز [OH⁻]</option><option value="ph">قيمة pH</option><option value="poh">قيمة pOH</option></select>
             </div>
             <div class="calc-field"><label>القيمة</label><input type="number" id="ph-value" placeholder="0.001" step="any" value="0.001"></div>
             <button class="btn" onclick="calcPH()"><i class="fas fa-equals"></i> احسب</button>
@@ -934,11 +925,11 @@ input:checked + .slider:before{transform:translateX(24px)}
           <div class="calc-form">
             <div class="calc-form-row">
               <div class="calc-field"><label>C₁</label><input type="number" id="d-c1" placeholder="M₁" step="any"></div>
-              <div class="calc-field"><label>V₁</label><input type="number" id="d-v1" placeholder="L أو mL" step="any"></div>
+              <div class="calc-field"><label>V₁</label><input type="number" id="d-v1" placeholder="L" step="any"></div>
             </div>
             <div class="calc-form-row">
               <div class="calc-field"><label>C₂</label><input type="number" id="d-c2" placeholder="M₂" step="any"></div>
-              <div class="calc-field"><label>V₂</label><input type="number" id="d-v2" placeholder="L أو mL" step="any"></div>
+              <div class="calc-field"><label>V₂</label><input type="number" id="d-v2" placeholder="L" step="any"></div>
             </div>
             <button class="btn" onclick="calcDilution()"><i class="fas fa-equals"></i> احسب</button>
           </div>
@@ -951,7 +942,7 @@ input:checked + .slider:before{transform:translateX(24px)}
 
         <div class="calc-panel" id="calc-gas">
           <h3><i class="fas fa-wind"></i> قانون الغاز المثالي</h3>
-          <p class="calc-desc">PV = nRT — اترك حقل واحد فارغ. R = 0.0821</p>
+          <p class="calc-desc">PV = nRT — اترك حقل فارغ. R = 0.0821</p>
           <div class="calc-form">
             <div class="calc-form-row">
               <div class="calc-field"><label>P (atm)</label><input type="number" id="g-p" step="any"></div>
@@ -977,7 +968,6 @@ input:checked + .slider:before{transform:translateX(24px)}
             <div class="calc-field"><label>المعادلة</label><input type="text" id="balance-eq" placeholder="H2 + O2 = H2O" value="H2 + O2 = H2O"></div>
             <button class="btn" onclick="calcBalance()"><i class="fas fa-equals"></i> وازن</button>
           </div>
-          <div class="calc-help">💡 استخدم '=' أو '->' للفصل</div>
           <div class="calc-result" id="balance-result">
             <div class="calc-result-label">المعادلة الموزونة</div>
             <div class="calc-result-value" id="balance-value">-</div>
@@ -987,7 +977,6 @@ input:checked + .slider:before{transform:translateX(24px)}
 
         <div class="calc-panel" id="calc-conc">
           <h3><i class="fas fa-vial"></i> حاسبة التركيز</h3>
-          <p class="calc-desc">احسب المولارية من الكتلة والحجم</p>
           <div class="calc-form">
             <div class="calc-form-row">
               <div class="calc-field"><label>الكتلة (g)</label><input type="number" id="c-mass" step="any"></div>
@@ -1005,7 +994,6 @@ input:checked + .slider:before{transform:translateX(24px)}
 
         <div class="calc-panel" id="calc-convert">
           <h3><i class="fas fa-exchange-alt"></i> تحويلات المول</h3>
-          <p class="calc-desc">حوّل بين: g ← mol ← جزيئات</p>
           <div class="calc-form">
             <div class="calc-form-row">
               <div class="calc-field"><label>القيمة</label><input type="number" id="cv-val" step="any" value="1"></div>
@@ -1025,7 +1013,6 @@ input:checked + .slider:before{transform:translateX(24px)}
 
         <div class="calc-panel" id="calc-energy">
           <h3><i class="fas fa-bolt"></i> حاسبة الطاقة</h3>
-          <p class="calc-desc">E = m×c×ΔT أو E = mc² أو E = hf</p>
           <div class="calc-form">
             <div class="calc-field"><label>نوع الحساب</label>
               <select id="e-type" onchange="toggleEnergyFields()">
@@ -1092,11 +1079,11 @@ input:checked + .slider:before{transform:translateX(24px)}
           <div class="quiz-option" data-mode="exam"><i class="fas fa-clock"></i><h4>وضع الامتحان</h4><p>اختبر نفسك في ظروف مشابهة للامتحان</p></div>
         </div>
         <div class="setting-item">
-          <div class="setting-info"><h4>عدد الأسئلة</h4><p>اختر عدد الأسئلة</p></div>
-          <select id="question-count"><option value="10">10 أسئلة</option><option value="20">20 سؤالاً</option><option value="30">30 سؤالاً</option><option value="50" selected>50 سؤالاً (كاملة)</option></select>
+          <div class="setting-info"><h4>عدد الأسئلة</h4></div>
+          <select id="question-count"><option value="10">10 أسئلة</option><option value="20">20 سؤالاً</option><option value="30">30 سؤالاً</option><option value="50" selected>50 سؤالاً</option></select>
         </div>
         <div class="setting-item">
-          <div class="setting-info"><h4>مستوى الصعوبة</h4><p>اختر المستوى المناسب</p></div>
+          <div class="setting-info"><h4>مستوى الصعوبة</h4></div>
           <select id="difficulty"><option value="all">جميع المستويات</option><option value="easy">سهل</option><option value="medium" selected>متوسط</option><option value="hard">صعب</option></select>
         </div>
         <div class="quiz-controls">
@@ -1221,23 +1208,23 @@ input:checked + .slider:before{transform:translateX(24px)}
 
         <div class="settings-panel" id="panel-ai">
           <div class="settings-group">
-            <h3><i class="fas fa-key"></i> مفاتيح API للذكاء الاصطناعي</h3>
-            <p style="color:#94a3b8;font-size:.85em;margin-bottom:16px;line-height:1.7;">لتفعيل الذكاء الاصطناعي الحقيقي، أدخل مفتاح API مجاني من Groq أو Google Gemini. سيتم حفظ المفتاح في جهازك فقط. إذا لم تُدخل مفتاحاً، سيعمل المساعد بقاعدة معرفة داخلية شاملة.</p>
+            <h3><i class="fas fa-key"></i> مفاتيح API</h3>
+            <p style="color:#94a3b8;font-size:.85em;margin-bottom:16px;line-height:1.7;">💡 <strong>الأفضل حالياً: Groq مع GPT-OSS-120B</strong> — مجاني، سريع، ولا يحتاج تفعيل.</p>
             <div class="setting-item">
-              <div class="setting-info"><h4>مزود الخدمة</h4><p>Groq (أسرع) أو Gemini (Google)</p></div>
-              <select id="ai-provider"><option value="internal">داخلي (بدون API)</option><option value="groq">Groq</option><option value="gemini">Google Gemini</option></select>
+              <div class="setting-info"><h4>مزود الخدمة</h4><p>Groq (موصى به) أو Gemini</p></div>
+              <select id="ai-provider"><option value="internal">داخلي (بدون API)</option><option value="groq" selected>Groq (GPT-OSS-120B)</option><option value="gemini">Google Gemini</option></select>
             </div>
             <div class="setting-item">
               <div class="setting-info"><h4>Groq API Key</h4><p>من console.groq.com (مجاني)</p></div>
               <input type="password" id="ai-groq-key" placeholder="gsk_..." style="min-width:250px;">
             </div>
             <div class="setting-item">
-              <div class="setting-info"><h4>Gemini API Key</h4><p>من aistudio.google.com (مجاني)</p></div>
+              <div class="setting-info"><h4>Gemini API Key</h4><p>من aistudio.google.com</p></div>
               <input type="password" id="ai-gemini-key" placeholder="AIza..." style="min-width:250px;">
             </div>
             <div class="setting-item">
               <div class="setting-info"><h4>حفظ المفاتيح</h4><p>حفظ في المتصفح</p></div>
-              <button class="btn" onclick="saveAIKeys()"><i class="fas fa-save"></i> حفظ المفاتيح</button>
+              <button class="btn" onclick="saveAIKeys()"><i class="fas fa-save"></i> حفظ</button>
             </div>
           </div>
         </div>
@@ -1245,21 +1232,21 @@ input:checked + .slider:before{transform:translateX(24px)}
         <div class="settings-panel" id="panel-notifications">
           <div class="settings-group">
             <h3><i class="fas fa-bell"></i> تفضيلات الإشعارات</h3>
-            <div class="setting-item"><div class="setting-info"><h4>تفعيل الإشعارات</h4><p>عرض الإشعارات</p></div><label class="toggle-switch"><input type="checkbox" id="notifications-enabled" checked><span class="slider"></span></label></div>
-            <div class="setting-item"><div class="setting-info"><h4>تنبيهات الاختبارات</h4><p>عند إتمام الاختبارات</p></div><label class="toggle-switch"><input type="checkbox" id="quiz-notif" checked><span class="slider"></span></label></div>
-            <div class="setting-item"><div class="setting-info"><h4>تنبيهات الإنجازات</h4><p>عند تحقيق إنجاز</p></div><label class="toggle-switch"><input type="checkbox" id="achieve-notif" checked><span class="slider"></span></label></div>
+            <div class="setting-item"><div class="setting-info"><h4>تفعيل الإشعارات</h4></div><label class="toggle-switch"><input type="checkbox" id="notifications-enabled" checked><span class="slider"></span></label></div>
+            <div class="setting-item"><div class="setting-info"><h4>تنبيهات الاختبارات</h4></div><label class="toggle-switch"><input type="checkbox" id="quiz-notif" checked><span class="slider"></span></label></div>
+            <div class="setting-item"><div class="setting-info"><h4>تنبيهات الإنجازات</h4></div><label class="toggle-switch"><input type="checkbox" id="achieve-notif" checked><span class="slider"></span></label></div>
           </div>
         </div>
 
         <div class="settings-panel" id="panel-quiz">
           <div class="settings-group">
             <h3><i class="fas fa-sliders-h"></i> تفضيلات الاختبارات</h3>
-            <div class="setting-item"><div class="setting-info"><h4>عدد الأسئلة الافتراضي</h4><p>في كل اختبار</p></div><input type="number" id="default-question-count" value="20" min="5" max="50"></div>
-            <div class="setting-item"><div class="setting-info"><h4>مستوى الصعوبة</h4><p>افتراضي</p></div>
+            <div class="setting-item"><div class="setting-info"><h4>عدد الأسئلة الافتراضي</h4></div><input type="number" id="default-question-count" value="20" min="5" max="50"></div>
+            <div class="setting-item"><div class="setting-info"><h4>مستوى الصعوبة</h4></div>
               <select id="default-difficulty"><option value="all">جميع المستويات</option><option value="easy">سهل</option><option value="medium" selected>متوسط</option><option value="hard">صعب</option></select>
             </div>
-            <div class="setting-item"><div class="setting-info"><h4>الشرح الفوري</h4><p>عرض التفسير مباشرة</p></div><label class="toggle-switch"><input type="checkbox" id="instant-explain" checked><span class="slider"></span></label></div>
-            <div class="setting-item"><div class="setting-info"><h4>مدة المؤقت</h4><p>في وضع الامتحان</p></div>
+            <div class="setting-item"><div class="setting-info"><h4>الشرح الفوري</h4></div><label class="toggle-switch"><input type="checkbox" id="instant-explain" checked><span class="slider"></span></label></div>
+            <div class="setting-item"><div class="setting-info"><h4>مدة المؤقت</h4></div>
               <select id="timer-duration"><option value="15">15 دقيقة</option><option value="30" selected>30 دقيقة</option><option value="45">45 دقيقة</option><option value="60">60 دقيقة</option></select>
             </div>
           </div>
@@ -1269,9 +1256,9 @@ input:checked + .slider:before{transform:translateX(24px)}
           <div class="settings-group">
             <h3><i class="fas fa-database"></i> إدارة البيانات</h3>
             <div class="setting-item"><div class="setting-info"><h4>حجم البيانات</h4><p id="data-size">-- KB</p></div><button class="btn btn-outline" onclick="calculateDataSize()"><i class="fas fa-calculator"></i> حساب</button></div>
-            <div class="setting-item"><div class="setting-info"><h4>تصدير البيانات</h4><p>تنزيل نسخة احتياطية</p></div><button class="btn btn-outline" id="export-data"><i class="fas fa-download"></i> تصدير</button></div>
-            <div class="setting-item"><div class="setting-info"><h4>استيراد</h4><p>استعادة نسخة</p></div><label class="btn btn-outline" style="cursor:pointer;"><i class="fas fa-upload"></i> استيراد<input type="file" id="import-file" accept=".json" hidden></label></div>
-            <div class="setting-item"><div class="setting-info"><h4>حذف جميع البيانات</h4><p>مسح كل شيء</p></div><button class="btn btn-danger" onclick="clearAllData()"><i class="fas fa-trash"></i> حذف الكل</button></div>
+            <div class="setting-item"><div class="setting-info"><h4>تصدير البيانات</h4></div><button class="btn btn-outline" id="export-data"><i class="fas fa-download"></i> تصدير</button></div>
+            <div class="setting-item"><div class="setting-info"><h4>استيراد</h4></div><label class="btn btn-outline" style="cursor:pointer;"><i class="fas fa-upload"></i> استيراد<input type="file" id="import-file" accept=".json" hidden></label></div>
+            <div class="setting-item"><div class="setting-info"><h4>حذف جميع البيانات</h4></div><button class="btn btn-danger" onclick="clearAllData()"><i class="fas fa-trash"></i> حذف الكل</button></div>
           </div>
         </div>
 
@@ -1289,8 +1276,8 @@ input:checked + .slider:before{transform:translateX(24px)}
         <div class="user-actions"><button class="btn btn-outline" onclick="navigateTo('welcome')"><i class="fas fa-arrow-right"></i> العودة</button></div>
       </div>
       <div class="simulation-container">
-        <h2><i class="fas fa-balance-scale"></i> محاكاة موازنة المعادلات الكيميائية</h2>
-        <p>استخدم هذه المحاكاة التفاعلية لموازنة المعادلات الكيميائية واكتشاف مبادئ حفظ الكتلة</p>
+        <h2><i class="fas fa-balance-scale"></i> محاكاة موازنة المعادلات</h2>
+        <p>استخدم هذه المحاكاة التفاعلية لموازنة المعادلات واكتشاف مبادئ حفظ الكتلة</p>
         <iframe src="https://phet.colorado.edu/sims/html/balancing-chemical-equations/latest/balancing-chemical-equations_ar.html" class="simulation-frame" allowfullscreen></iframe>
         <div class="simulation-info">
           <h3><i class="fas fa-info-circle"></i> معلومات عن المحاكاة</h3>
@@ -1345,7 +1332,7 @@ input:checked + .slider:before{transform:translateX(24px)}
   </main>
 </div>
 
-<!-- Modal -->
+<!-- Modals -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal">
     <h3 id="modal-title">تأكيد</h3>
@@ -1357,7 +1344,6 @@ input:checked + .slider:before{transform:translateX(24px)}
   </div>
 </div>
 
-<!-- 3D Element Modal -->
 <div class="modal-overlay" id="modal-3d-overlay">
   <div class="modal modal-3d">
     <div class="modal-3d-header">
@@ -1373,23 +1359,21 @@ input:checked + .slider:before{transform:translateX(24px)}
   </div>
 </div>
 
-<!-- AI Settings Modal -->
 <div class="modal-overlay" id="ai-modal-overlay">
   <div class="modal">
     <h3><i class="fas fa-key"></i> إعدادات الذكاء الاصطناعي</h3>
-    <p>لتشغيل AI الحقيقي، اختر مزود وحفظ المفتاح:</p>
+    <p>💡 <strong>الموصى به:</strong> Groq + GPT-OSS-120B (مجاني، سريع، مستقر)</p>
     <div class="setting-item"><div class="setting-info"><h4>المزود</h4></div>
       <select id="ai-modal-provider" style="min-width:200px;">
         <option value="internal">داخلي (بدون API)</option>
-        <option value="groq">Groq</option>
+        <option value="groq" selected>Groq (GPT-OSS-120B)</option>
         <option value="gemini">Google Gemini</option>
       </select>
     </div>
     <div class="setting-item"><div class="setting-info"><h4>Groq Key</h4></div><input type="password" id="ai-modal-groq" placeholder="gsk_..." style="min-width:250px;"></div>
     <div class="setting-item"><div class="setting-info"><h4>Gemini Key</h4></div><input type="password" id="ai-modal-gemini" placeholder="AIza..." style="min-width:250px;"></div>
     <div class="calc-help" style="margin:16px 0;">
-      💡 <strong>Groq:</strong> من <a href="https://console.groq.com" target="_blank" style="color:var(--cyan);">console.groq.com</a> — مجاني<br>
-      💡 <strong>Gemini:</strong> من <a href="https://aistudio.google.com/app/apikey" target="_blank" style="color:var(--cyan);">aistudio.google.com</a> — مجاني
+      💡 <strong>Groq:</strong> مجاني 100% من <a href="https://console.groq.com" target="_blank" style="color:var(--cyan);">console.groq.com</a> — لا يحتاج بطاقة بنكية
     </div>
     <div class="modal-actions">
       <button class="btn btn-outline" onclick="closeAIModal()">إلغاء</button>
@@ -1406,9 +1390,7 @@ input:checked + .slider:before{transform:translateX(24px)}
 <audio id="complete-sound" preload="auto"><source src="https://assets.mixkit.co/active_storage/sfx/255/255-preview.mp3" type="audio/mp3"></audio>
 
 <script>
-/* ============================================================
-   🌌 Background
-   ============================================================ */
+/* Background */
 (function(){
   const canvas = document.getElementById('bg-canvas');
   const ctx = canvas.getContext('2d');
@@ -1456,9 +1438,7 @@ input:checked + .slider:before{transform:translateX(24px)}
   animate();
 })();
 
-/* ============================================================
-   🧭 Router
-   ============================================================ */
+/* Router */
 const VALID_SCREENS = ['auth','welcome','chemistry-human','periodic-table','calculator','ai-assistant','quiz-setup','quiz','results','settings','simulation','notifications','profile'];
 function getScreenFromHash(){
   let h = window.location.hash.replace(/^#\/?/,'');
@@ -1517,128 +1497,67 @@ document.getElementById('url-indicator').addEventListener('click',function(){
   });
 });
 
-/* ============================================================
-   📊 Periodic Table Data
-   ============================================================ */
+/* Periodic Table */
 const PT = [
-[1,'H','الهيدروجين','Hydrogen',1.008,'nonmetal',1,1,'1'],
-[2,'He','الهيليوم','Helium',4.003,'noble',18,1,'2'],
-[3,'Li','الليثيوم','Lithium',6.94,'alkali',1,2,'2,1'],
-[4,'Be','البيريليوم','Beryllium',9.012,'alkaline',2,2,'2,2'],
-[5,'B','البورون','Boron',10.81,'metalloid',13,2,'2,3'],
-[6,'C','الكربون','Carbon',12.011,'nonmetal',14,2,'2,4'],
-[7,'N','النيتروجين','Nitrogen',14.007,'nonmetal',15,2,'2,5'],
-[8,'O','الأكسجين','Oxygen',15.999,'nonmetal',16,2,'2,6'],
-[9,'F','الفلور','Fluorine',18.998,'halogen',17,2,'2,7'],
-[10,'Ne','النيون','Neon',20.180,'noble',18,2,'2,8'],
-[11,'Na','الصوديوم','Sodium',22.990,'alkali',1,3,'2,8,1'],
-[12,'Mg','المغنيسيوم','Magnesium',24.305,'alkaline',2,3,'2,8,2'],
-[13,'Al','الألومنيوم','Aluminum',26.982,'post-transition',13,3,'2,8,3'],
-[14,'Si','السيليكون','Silicon',28.086,'metalloid',14,3,'2,8,4'],
-[15,'P','الفوسفور','Phosphorus',30.974,'nonmetal',15,3,'2,8,5'],
-[16,'S','الكبريت','Sulfur',32.06,'nonmetal',16,3,'2,8,6'],
-[17,'Cl','الكلور','Chlorine',35.45,'halogen',17,3,'2,8,7'],
-[18,'Ar','الأرجون','Argon',39.948,'noble',18,3,'2,8,8'],
-[19,'K','البوتاسيوم','Potassium',39.098,'alkali',1,4,'2,8,8,1'],
-[20,'Ca','الكالسيوم','Calcium',40.078,'alkaline',2,4,'2,8,8,2'],
-[21,'Sc','السكانديوم','Scandium',44.956,'transition',3,4,'2,8,9,2'],
-[22,'Ti','التيتانيوم','Titanium',47.867,'transition',4,4,'2,8,10,2'],
-[23,'V','الفاناديوم','Vanadium',50.942,'transition',5,4,'2,8,11,2'],
-[24,'Cr','الكروم','Chromium',51.996,'transition',6,4,'2,8,13,1'],
-[25,'Mn','المنجنيز','Manganese',54.938,'transition',7,4,'2,8,13,2'],
-[26,'Fe','الحديد','Iron',55.845,'transition',8,4,'2,8,14,2'],
-[27,'Co','الكوبالت','Cobalt',58.933,'transition',9,4,'2,8,15,2'],
-[28,'Ni','النيكل','Nickel',58.693,'transition',10,4,'2,8,16,2'],
-[29,'Cu','النحاس','Copper',63.546,'transition',11,4,'2,8,18,1'],
-[30,'Zn','الزنك','Zinc',65.38,'transition',12,4,'2,8,18,2'],
-[31,'Ga','الجاليوم','Gallium',69.723,'post-transition',13,4,'2,8,18,3'],
-[32,'Ge','الجرمانيوم','Germanium',72.630,'metalloid',14,4,'2,8,18,4'],
-[33,'As','الزرنيخ','Arsenic',74.922,'metalloid',15,4,'2,8,18,5'],
-[34,'Se','السيلينيوم','Selenium',78.971,'nonmetal',16,4,'2,8,18,6'],
-[35,'Br','البروم','Bromine',79.904,'halogen',17,4,'2,8,18,7'],
-[36,'Kr','الكريبتون','Krypton',83.798,'noble',18,4,'2,8,18,8'],
-[37,'Rb','الروبيديوم','Rubidium',85.468,'alkali',1,5,'2,8,18,8,1'],
-[38,'Sr','السترونشيوم','Strontium',87.62,'alkaline',2,5,'2,8,18,8,2'],
-[39,'Y','الإيتريوم','Yttrium',88.906,'transition',3,5,'2,8,18,9,2'],
-[40,'Zr','الزركونيوم','Zirconium',91.224,'transition',4,5,'2,8,18,10,2'],
-[41,'Nb','النيوبيوم','Niobium',92.906,'transition',5,5,'2,8,18,12,1'],
-[42,'Mo','الموليبدينوم','Molybdenum',95.95,'transition',6,5,'2,8,18,13,1'],
-[43,'Tc','التكنيشيوم','Technetium',98,'transition',7,5,'2,8,18,13,2'],
-[44,'Ru','الروثينيوم','Ruthenium',101.07,'transition',8,5,'2,8,18,15,1'],
-[45,'Rh','الروديوم','Rhodium',102.906,'transition',9,5,'2,8,18,16,1'],
-[46,'Pd','البلاديوم','Palladium',106.42,'transition',10,5,'2,8,18,18'],
-[47,'Ag','الفضة','Silver',107.868,'transition',11,5,'2,8,18,18,1'],
-[48,'Cd','الكادميوم','Cadmium',112.414,'transition',12,5,'2,8,18,18,2'],
-[49,'In','الإنديوم','Indium',114.818,'post-transition',13,5,'2,8,18,18,3'],
-[50,'Sn','القصدير','Tin',118.710,'post-transition',14,5,'2,8,18,18,4'],
-[51,'Sb','الأنتيمون','Antimony',121.760,'metalloid',15,5,'2,8,18,18,5'],
-[52,'Te','التيلوريوم','Tellurium',127.60,'metalloid',16,5,'2,8,18,18,6'],
-[53,'I','اليود','Iodine',126.904,'halogen',17,5,'2,8,18,18,7'],
-[54,'Xe','الزينون','Xenon',131.293,'noble',18,5,'2,8,18,18,8'],
-[55,'Cs','السيزيوم','Cesium',132.905,'alkali',1,6,'2,8,18,18,8,1'],
-[56,'Ba','الباريوم','Barium',137.327,'alkaline',2,6,'2,8,18,18,8,2'],
-[57,'La','اللانثانوم','Lanthanum',138.905,'lanthanide',3,9,'2,8,18,18,9,2'],
-[58,'Ce','السيريوم','Cerium',140.116,'lanthanide',4,9,'2,8,18,19,9,2'],
-[59,'Pr','البراسيوديميوم','Praseodymium',140.908,'lanthanide',5,9,'2,8,18,21,8,2'],
-[60,'Nd','النيوديميوم','Neodymium',144.242,'lanthanide',6,9,'2,8,18,22,8,2'],
-[61,'Pm','البروميثيوم','Promethium',145,'lanthanide',7,9,'2,8,18,23,8,2'],
-[62,'Sm','الساماريوم','Samarium',150.36,'lanthanide',8,9,'2,8,18,24,8,2'],
-[63,'Eu','اليوروبيوم','Europium',151.964,'lanthanide',9,9,'2,8,18,25,8,2'],
-[64,'Gd','الجادولينيوم','Gadolinium',157.25,'lanthanide',10,9,'2,8,18,25,9,2'],
-[65,'Tb','التيربيوم','Terbium',158.925,'lanthanide',11,9,'2,8,18,27,8,2'],
-[66,'Dy','الديسبروسيوم','Dysprosium',162.5,'lanthanide',12,9,'2,8,18,28,8,2'],
-[67,'Ho','الهولميوم','Holmium',164.930,'lanthanide',13,9,'2,8,18,29,8,2'],
-[68,'Er','الإربيوم','Erbium',167.259,'lanthanide',14,9,'2,8,18,30,8,2'],
-[69,'Tm','الثوليوم','Thulium',168.934,'lanthanide',15,9,'2,8,18,31,8,2'],
-[70,'Yb','الإيتربيوم','Ytterbium',173.045,'lanthanide',16,9,'2,8,18,32,8,2'],
-[71,'Lu','اللوتيشيوم','Lutetium',174.967,'lanthanide',17,9,'2,8,18,32,9,2'],
-[72,'Hf','الهافنيوم','Hafnium',178.49,'transition',4,6,'2,8,18,32,10,2'],
-[73,'Ta','التانتالوم','Tantalum',180.948,'transition',5,6,'2,8,18,32,11,2'],
-[74,'W','التنجستن','Tungsten',183.84,'transition',6,6,'2,8,18,32,12,2'],
-[75,'Re','الرينيوم','Rhenium',186.207,'transition',7,6,'2,8,18,32,13,2'],
-[76,'Os','الأوزميوم','Osmium',190.23,'transition',8,6,'2,8,18,32,14,2'],
-[77,'Ir','الإيريديوم','Iridium',192.217,'transition',9,6,'2,8,18,32,15,2'],
-[78,'Pt','البلاتين','Platinum',195.084,'transition',10,6,'2,8,18,32,17,1'],
-[79,'Au','الذهب','Gold',196.967,'transition',11,6,'2,8,18,32,18,1'],
-[80,'Hg','الزئبق','Mercury',200.592,'transition',12,6,'2,8,18,32,18,2'],
-[81,'Tl','الثاليوم','Thallium',204.38,'post-transition',13,6,'2,8,18,32,18,3'],
-[82,'Pb','الرصاص','Lead',207.2,'post-transition',14,6,'2,8,18,32,18,4'],
-[83,'Bi','البزموت','Bismuth',208.980,'post-transition',15,6,'2,8,18,32,18,5'],
-[84,'Po','البولونيوم','Polonium',209,'post-transition',16,6,'2,8,18,32,18,6'],
-[85,'At','الأستاتين','Astatine',210,'halogen',17,6,'2,8,18,32,18,7'],
-[86,'Rn','الرادون','Radon',222,'noble',18,6,'2,8,18,32,18,8'],
-[87,'Fr','الفرانسيوم','Francium',223,'alkali',1,7,'2,8,18,32,18,8,1'],
-[88,'Ra','الراديوم','Radium',226,'alkaline',2,7,'2,8,18,32,18,8,2'],
-[89,'Ac','الأكتينيوم','Actinium',227,'actinide',3,10,'2,8,18,32,18,9,2'],
-[90,'Th','الثوريوم','Thorium',232.038,'actinide',4,10,'2,8,18,32,18,10,2'],
-[91,'Pa','البروتكتينيوم','Protactinium',231.036,'actinide',5,10,'2,8,18,32,20,9,2'],
-[92,'U','اليورانيوم','Uranium',238.029,'actinide',6,10,'2,8,18,32,21,9,2'],
-[93,'Np','النبتونيوم','Neptunium',237,'actinide',7,10,'2,8,18,32,22,9,2'],
-[94,'Pu','البلوتونيوم','Plutonium',244,'actinide',8,10,'2,8,18,32,24,8,2'],
-[95,'Am','الأمريسيوم','Americium',243,'actinide',9,10,'2,8,18,32,25,8,2'],
-[96,'Cm','الكوريوم','Curium',247,'actinide',10,10,'2,8,18,32,25,9,2'],
-[97,'Bk','البركيليوم','Berkelium',247,'actinide',11,10,'2,8,18,32,27,8,2'],
-[98,'Cf','الكاليفورنيوم','Californium',251,'actinide',12,10,'2,8,18,32,28,8,2'],
-[99,'Es','الأينشتاينيوم','Einsteinium',252,'actinide',13,10,'2,8,18,32,29,8,2'],
-[100,'Fm','الفرميوم','Fermium',257,'actinide',14,10,'2,8,18,32,30,8,2'],
-[101,'Md','المندليفيوم','Mendelevium',258,'actinide',15,10,'2,8,18,32,31,8,2'],
-[102,'No','النوبليوم','Nobelium',259,'actinide',16,10,'2,8,18,32,32,8,2'],
-[103,'Lr','اللورنسيوم','Lawrencium',266,'actinide',17,10,'2,8,18,32,32,8,3'],
-[104,'Rf','الرذرفورديوم','Rutherfordium',267,'transition',4,7,'2,8,18,32,32,10,2'],
-[105,'Db','الدوبنيوم','Dubnium',268,'transition',5,7,'2,8,18,32,32,11,2'],
-[106,'Sg','السيبورجيوم','Seaborgium',269,'transition',6,7,'2,8,18,32,32,12,2'],
-[107,'Bh','البوريوم','Bohrium',270,'transition',7,7,'2,8,18,32,32,13,2'],
-[108,'Hs','الهاسيوم','Hassium',269,'transition',8,7,'2,8,18,32,32,14,2'],
-[109,'Mt','الميتمريوم','Meitnerium',278,'unknown',9,7,'2,8,18,32,32,15,2'],
-[110,'Ds','الدارمشتاتيوم','Darmstadtium',281,'unknown',10,7,'2,8,18,32,32,16,2'],
-[111,'Rg','الرونتجينيوم','Roentgenium',282,'unknown',11,7,'2,8,18,32,32,17,2'],
-[112,'Cn','الكوبرنيسيوم','Copernicium',285,'transition',12,7,'2,8,18,32,32,18,2'],
-[113,'Nh','النيهونيوم','Nihonium',286,'unknown',13,7,'2,8,18,32,32,18,3'],
-[114,'Fl','الفليفوريوم','Flerovium',289,'unknown',14,7,'2,8,18,32,32,18,4'],
-[115,'Mc','الموسكوفيوم','Moscovium',290,'unknown',15,7,'2,8,18,32,32,18,5'],
-[116,'Lv','الليفرموريوم','Livermorium',293,'unknown',16,7,'2,8,18,32,32,18,6'],
-[117,'Ts','التينيسين','Tennessine',294,'unknown',17,7,'2,8,18,32,32,18,7'],
-[118,'Og','الأوغانيسون','Oganesson',294,'unknown',18,7,'2,8,18,32,32,18,8']
+[1,'H','الهيدروجين','Hydrogen',1.008,'nonmetal',1,1,'1'],[2,'He','الهيليوم','Helium',4.003,'noble',18,1,'2'],
+[3,'Li','الليثيوم','Lithium',6.94,'alkali',1,2,'2,1'],[4,'Be','البيريليوم','Beryllium',9.012,'alkaline',2,2,'2,2'],
+[5,'B','البورون','Boron',10.81,'metalloid',13,2,'2,3'],[6,'C','الكربون','Carbon',12.011,'nonmetal',14,2,'2,4'],
+[7,'N','النيتروجين','Nitrogen',14.007,'nonmetal',15,2,'2,5'],[8,'O','الأكسجين','Oxygen',15.999,'nonmetal',16,2,'2,6'],
+[9,'F','الفلور','Fluorine',18.998,'halogen',17,2,'2,7'],[10,'Ne','النيون','Neon',20.180,'noble',18,2,'2,8'],
+[11,'Na','الصوديوم','Sodium',22.990,'alkali',1,3,'2,8,1'],[12,'Mg','المغنيسيوم','Magnesium',24.305,'alkaline',2,3,'2,8,2'],
+[13,'Al','الألومنيوم','Aluminum',26.982,'post-transition',13,3,'2,8,3'],[14,'Si','السيليكون','Silicon',28.086,'metalloid',14,3,'2,8,4'],
+[15,'P','الفوسفور','Phosphorus',30.974,'nonmetal',15,3,'2,8,5'],[16,'S','الكبريت','Sulfur',32.06,'nonmetal',16,3,'2,8,6'],
+[17,'Cl','الكلور','Chlorine',35.45,'halogen',17,3,'2,8,7'],[18,'Ar','الأرجون','Argon',39.948,'noble',18,3,'2,8,8'],
+[19,'K','البوتاسيوم','Potassium',39.098,'alkali',1,4,'2,8,8,1'],[20,'Ca','الكالسيوم','Calcium',40.078,'alkaline',2,4,'2,8,8,2'],
+[21,'Sc','السكانديوم','Scandium',44.956,'transition',3,4,'2,8,9,2'],[22,'Ti','التيتانيوم','Titanium',47.867,'transition',4,4,'2,8,10,2'],
+[23,'V','الفاناديوم','Vanadium',50.942,'transition',5,4,'2,8,11,2'],[24,'Cr','الكروم','Chromium',51.996,'transition',6,4,'2,8,13,1'],
+[25,'Mn','المنجنيز','Manganese',54.938,'transition',7,4,'2,8,13,2'],[26,'Fe','الحديد','Iron',55.845,'transition',8,4,'2,8,14,2'],
+[27,'Co','الكوبالت','Cobalt',58.933,'transition',9,4,'2,8,15,2'],[28,'Ni','النيكل','Nickel',58.693,'transition',10,4,'2,8,16,2'],
+[29,'Cu','النحاس','Copper',63.546,'transition',11,4,'2,8,18,1'],[30,'Zn','الزنك','Zinc',65.38,'transition',12,4,'2,8,18,2'],
+[31,'Ga','الجاليوم','Gallium',69.723,'post-transition',13,4,'2,8,18,3'],[32,'Ge','الجرمانيوم','Germanium',72.630,'metalloid',14,4,'2,8,18,4'],
+[33,'As','الزرنيخ','Arsenic',74.922,'metalloid',15,4,'2,8,18,5'],[34,'Se','السيلينيوم','Selenium',78.971,'nonmetal',16,4,'2,8,18,6'],
+[35,'Br','البروم','Bromine',79.904,'halogen',17,4,'2,8,18,7'],[36,'Kr','الكريبتون','Krypton',83.798,'noble',18,4,'2,8,18,8'],
+[37,'Rb','الروبيديوم','Rubidium',85.468,'alkali',1,5,'2,8,18,8,1'],[38,'Sr','السترونشيوم','Strontium',87.62,'alkaline',2,5,'2,8,18,8,2'],
+[39,'Y','الإيتريوم','Yttrium',88.906,'transition',3,5,'2,8,18,9,2'],[40,'Zr','الزركونيوم','Zirconium',91.224,'transition',4,5,'2,8,18,10,2'],
+[41,'Nb','النيوبيوم','Niobium',92.906,'transition',5,5,'2,8,18,12,1'],[42,'Mo','الموليبدينوم','Molybdenum',95.95,'transition',6,5,'2,8,18,13,1'],
+[43,'Tc','التكنيشيوم','Technetium',98,'transition',7,5,'2,8,18,13,2'],[44,'Ru','الروثينيوم','Ruthenium',101.07,'transition',8,5,'2,8,18,15,1'],
+[45,'Rh','الروديوم','Rhodium',102.906,'transition',9,5,'2,8,18,16,1'],[46,'Pd','البلاديوم','Palladium',106.42,'transition',10,5,'2,8,18,18'],
+[47,'Ag','الفضة','Silver',107.868,'transition',11,5,'2,8,18,18,1'],[48,'Cd','الكادميوم','Cadmium',112.414,'transition',12,5,'2,8,18,18,2'],
+[49,'In','الإنديوم','Indium',114.818,'post-transition',13,5,'2,8,18,18,3'],[50,'Sn','القصدير','Tin',118.710,'post-transition',14,5,'2,8,18,18,4'],
+[51,'Sb','الأنتيمون','Antimony',121.760,'metalloid',15,5,'2,8,18,18,5'],[52,'Te','التيلوريوم','Tellurium',127.60,'metalloid',16,5,'2,8,18,18,6'],
+[53,'I','اليود','Iodine',126.904,'halogen',17,5,'2,8,18,18,7'],[54,'Xe','الزينون','Xenon',131.293,'noble',18,5,'2,8,18,18,8'],
+[55,'Cs','السيزيوم','Cesium',132.905,'alkali',1,6,'2,8,18,18,8,1'],[56,'Ba','الباريوم','Barium',137.327,'alkaline',2,6,'2,8,18,18,8,2'],
+[57,'La','اللانثانوم','Lanthanum',138.905,'lanthanide',3,9,'2,8,18,18,9,2'],[58,'Ce','السيريوم','Cerium',140.116,'lanthanide',4,9,'2,8,18,19,9,2'],
+[59,'Pr','البراسيوديميوم','Praseodymium',140.908,'lanthanide',5,9,'2,8,18,21,8,2'],[60,'Nd','النيوديميوم','Neodymium',144.242,'lanthanide',6,9,'2,8,18,22,8,2'],
+[61,'Pm','البروميثيوم','Promethium',145,'lanthanide',7,9,'2,8,18,23,8,2'],[62,'Sm','الساماريوم','Samarium',150.36,'lanthanide',8,9,'2,8,18,24,8,2'],
+[63,'Eu','اليوروبيوم','Europium',151.964,'lanthanide',9,9,'2,8,18,25,8,2'],[64,'Gd','الجادولينيوم','Gadolinium',157.25,'lanthanide',10,9,'2,8,18,25,9,2'],
+[65,'Tb','التيربيوم','Terbium',158.925,'lanthanide',11,9,'2,8,18,27,8,2'],[66,'Dy','الديسبروسيوم','Dysprosium',162.5,'lanthanide',12,9,'2,8,18,28,8,2'],
+[67,'Ho','الهولميوم','Holmium',164.930,'lanthanide',13,9,'2,8,18,29,8,2'],[68,'Er','الإربيوم','Erbium',167.259,'lanthanide',14,9,'2,8,18,30,8,2'],
+[69,'Tm','الثوليوم','Thulium',168.934,'lanthanide',15,9,'2,8,18,31,8,2'],[70,'Yb','الإيتربيوم','Ytterbium',173.045,'lanthanide',16,9,'2,8,18,32,8,2'],
+[71,'Lu','اللوتيشيوم','Lutetium',174.967,'lanthanide',17,9,'2,8,18,32,9,2'],[72,'Hf','الهافنيوم','Hafnium',178.49,'transition',4,6,'2,8,18,32,10,2'],
+[73,'Ta','التانتالوم','Tantalum',180.948,'transition',5,6,'2,8,18,32,11,2'],[74,'W','التنجستن','Tungsten',183.84,'transition',6,6,'2,8,18,32,12,2'],
+[75,'Re','الرينيوم','Rhenium',186.207,'transition',7,6,'2,8,18,32,13,2'],[76,'Os','الأوزميوم','Osmium',190.23,'transition',8,6,'2,8,18,32,14,2'],
+[77,'Ir','الإيريديوم','Iridium',192.217,'transition',9,6,'2,8,18,32,15,2'],[78,'Pt','البلاتين','Platinum',195.084,'transition',10,6,'2,8,18,32,17,1'],
+[79,'Au','الذهب','Gold',196.967,'transition',11,6,'2,8,18,32,18,1'],[80,'Hg','الزئبق','Mercury',200.592,'transition',12,6,'2,8,18,32,18,2'],
+[81,'Tl','الثاليوم','Thallium',204.38,'post-transition',13,6,'2,8,18,32,18,3'],[82,'Pb','الرصاص','Lead',207.2,'post-transition',14,6,'2,8,18,32,18,4'],
+[83,'Bi','البزموت','Bismuth',208.980,'post-transition',15,6,'2,8,18,32,18,5'],[84,'Po','البولونيوم','Polonium',209,'post-transition',16,6,'2,8,18,32,18,6'],
+[85,'At','الأستاتين','Astatine',210,'halogen',17,6,'2,8,18,32,18,7'],[86,'Rn','الرادون','Radon',222,'noble',18,6,'2,8,18,32,18,8'],
+[87,'Fr','الفرانسيوم','Francium',223,'alkali',1,7,'2,8,18,32,18,8,1'],[88,'Ra','الراديوم','Radium',226,'alkaline',2,7,'2,8,18,32,18,8,2'],
+[89,'Ac','الأكتينيوم','Actinium',227,'actinide',3,10,'2,8,18,32,18,9,2'],[90,'Th','الثوريوم','Thorium',232.038,'actinide',4,10,'2,8,18,32,18,10,2'],
+[91,'Pa','البروتكتينيوم','Protactinium',231.036,'actinide',5,10,'2,8,18,32,20,9,2'],[92,'U','اليورانيوم','Uranium',238.029,'actinide',6,10,'2,8,18,32,21,9,2'],
+[93,'Np','النبتونيوم','Neptunium',237,'actinide',7,10,'2,8,18,32,22,9,2'],[94,'Pu','البلوتونيوم','Plutonium',244,'actinide',8,10,'2,8,18,32,24,8,2'],
+[95,'Am','الأمريسيوم','Americium',243,'actinide',9,10,'2,8,18,32,25,8,2'],[96,'Cm','الكوريوم','Curium',247,'actinide',10,10,'2,8,18,32,25,9,2'],
+[97,'Bk','البركيليوم','Berkelium',247,'actinide',11,10,'2,8,18,32,27,8,2'],[98,'Cf','الكاليفورنيوم','Californium',251,'actinide',12,10,'2,8,18,32,28,8,2'],
+[99,'Es','الأينشتاينيوم','Einsteinium',252,'actinide',13,10,'2,8,18,32,29,8,2'],[100,'Fm','الفرميوم','Fermium',257,'actinide',14,10,'2,8,18,32,30,8,2'],
+[101,'Md','المندليفيوم','Mendelevium',258,'actinide',15,10,'2,8,18,32,31,8,2'],[102,'No','النوبليوم','Nobelium',259,'actinide',16,10,'2,8,18,32,32,8,2'],
+[103,'Lr','اللورنسيوم','Lawrencium',266,'actinide',17,10,'2,8,18,32,32,8,3'],[104,'Rf','الرذرفورديوم','Rutherfordium',267,'transition',4,7,'2,8,18,32,32,10,2'],
+[105,'Db','الدوبنيوم','Dubnium',268,'transition',5,7,'2,8,18,32,32,11,2'],[106,'Sg','السيبورجيوم','Seaborgium',269,'transition',6,7,'2,8,18,32,32,12,2'],
+[107,'Bh','البوريوم','Bohrium',270,'transition',7,7,'2,8,18,32,32,13,2'],[108,'Hs','الهاسيوم','Hassium',269,'transition',8,7,'2,8,18,32,32,14,2'],
+[109,'Mt','الميتمريوم','Meitnerium',278,'unknown',9,7,'2,8,18,32,32,15,2'],[110,'Ds','الدارمشتاتيوم','Darmstadtium',281,'unknown',10,7,'2,8,18,32,32,16,2'],
+[111,'Rg','الرونتجينيوم','Roentgenium',282,'unknown',11,7,'2,8,18,32,32,17,2'],[112,'Cn','الكوبرنيسيوم','Copernicium',285,'transition',12,7,'2,8,18,32,32,18,2'],
+[113,'Nh','النيهونيوم','Nihonium',286,'unknown',13,7,'2,8,18,32,32,18,3'],[114,'Fl','الفليفوريوم','Flerovium',289,'unknown',14,7,'2,8,18,32,32,18,4'],
+[115,'Mc','الموسكوفيوم','Moscovium',290,'unknown',15,7,'2,8,18,32,32,18,5'],[116,'Lv','الليفرموريوم','Livermorium',293,'unknown',16,7,'2,8,18,32,32,18,6'],
+[117,'Ts','التينيسين','Tennessine',294,'unknown',17,7,'2,8,18,32,32,18,7'],[118,'Og','الأوغانيسون','Oganesson',294,'unknown',18,7,'2,8,18,32,32,18,8']
 ];
 
 const CATEGORIES = {
@@ -1713,9 +1632,7 @@ function renderPeriodicTable(){
   }
 }
 
-/* ============================================================
-   🎨 3D Bohr Model
-   ============================================================ */
+/* 3D Bohr */
 let currentThreeAnim = null;
 let currentThreeScene = null;
 
@@ -1778,8 +1695,7 @@ function createBohrModel(shells, protons, color){
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   container.insertBefore(renderer.domElement, container.firstChild);
   currentThreeScene = scene;
-  const ambient = new THREE.AmbientLight(0xffffff, 0.6);
-  scene.add(ambient);
+  scene.add(new THREE.AmbientLight(0xffffff, 0.6));
   const point = new THREE.PointLight(0xffffff, 1, 100);
   point.position.set(10, 10, 10);
   scene.add(point);
@@ -1893,9 +1809,7 @@ function createBohrModel(shells, protons, color){
   ro.observe(container);
 }
 
-/* ============================================================
-   🔐 Auth
-   ============================================================ */
+/* Auth */
 const USERS_KEY='chemUsers', SESSION_KEY='chemSession', SETTINGS_KEY='chemSettings', RESULTS_KEY='chemResults', NOTIF_KEY='chemNotifs';
 function getUsers(){ try{ return JSON.parse(localStorage.getItem(USERS_KEY)||'[]'); }catch{ return []; } }
 function saveUsers(a){ localStorage.setItem(USERS_KEY, JSON.stringify(a)); }
@@ -1997,9 +1911,7 @@ function applyUserToUI(user){
   document.getElementById('profile-avatar-display').innerHTML = avatarHTML;
 }
 
-/* ============================================================
-   🎨 Theme & Settings
-   ============================================================ */
+/* Theme */
 const THEMES = [
   {id:'indigo',primary:'#6366f1',secondary:'#8b5cf6',name:'بنفسجي'},
   {id:'blue',primary:'#3b82f6',secondary:'#06b6d4',name:'أزرق'},
@@ -2047,7 +1959,7 @@ function loadSettingsUI(){
   document.getElementById('default-difficulty').value = s.defaultDifficulty || 'medium';
   document.getElementById('instant-explain').checked = s.instantExplain !== false;
   document.getElementById('timer-duration').value = s.timerDuration || 30;
-  document.getElementById('ai-provider').value = s.aiProvider || 'internal';
+  document.getElementById('ai-provider').value = s.aiProvider || 'groq';
   document.getElementById('ai-groq-key').value = s.groqKey || '';
   document.getElementById('ai-gemini-key').value = s.geminiKey || '';
   renderThemePicker();
@@ -2157,6 +2069,7 @@ document.getElementById('save-settings').addEventListener('click', function(){
   s.geminiKey = document.getElementById('ai-gemini-key').value;
   localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
   applySettings();
+  updateAIStatus();
   showToast('✅ تم حفظ الإعدادات','success');
 });
 
@@ -2239,9 +2152,7 @@ function clearAllData(){
   });
 }
 
-/* ============================================================
-   🔔 Notifications
-   ============================================================ */
+/* Notifications */
 let notifications = [];
 function loadNotifications(){ try{ notifications = JSON.parse(localStorage.getItem(NOTIF_KEY) || '[]'); }catch{ notifications = []; } }
 function saveNotifications(){ localStorage.setItem(NOTIF_KEY, JSON.stringify(notifications)); updateNotifBadge(); }
@@ -2289,9 +2200,7 @@ document.getElementById('clear-notifications').addEventListener('click', functio
   });
 });
 
-/* ============================================================
-   📊 Dashboard
-   ============================================================ */
+/* Dashboard */
 function updateDashboard(){
   const arr = JSON.parse(localStorage.getItem(RESULTS_KEY) || '[]');
   if(arr.length){
@@ -2314,11 +2223,9 @@ function updateDashboard(){
   document.getElementById('welcome-subtitle').textContent = greet + '، لنبدأ رحلة الكيمياء التفاعلية معاً';
 }
 
-/* ============================================================
-   ❓ Questions
-   ============================================================ */
+/* Questions */
 const allQuestions = [
-{q:"العملية التي يعاد فيها ترتيب الذرات لتكوين مواد جديدة تسمى:",o:["التغير الفيزيائي","التفاعل النووي","التفاعل الكيميائي"],c:2,e:"تعريف التفاعل الكيميائي",l:"التفاعلات",d:"easy"},
+{q:"العملية التي يعاد فيها ترتيب الذرات لتكوين مواد جديدة:",o:["التغير الفيزيائي","التفاعل النووي","التفاعل الكيميائي"],c:2,e:"تعريف التفاعل الكيميائي",l:"التفاعلات",d:"easy"},
 {q:"المعادلة التي توضح الأيونات المشاركة في التفاعل:",o:["المعادلة الكيميائية","المعادلة الأيونية","المعادلة الموزونة"],c:1,e:"المعادلة الأيونية",l:"التفاعلات",d:"medium"},
 {q:"أقصى عدد إلكترونات في المستوى الرابع:",o:["18","8","32"],c:2,e:"2n² = 32",l:"الترتيب الإلكتروني",d:"medium"},
 {q:"الصيغة الأيونية الصحيحة لكلوريد الصوديوم:",o:["Na²⁺ Cl⁻","Na⁺ Cl⁻","Na²⁺ Cl²⁻"],c:1,e:"Na⁺ Cl⁻",l:"التفاعلات",d:"easy"},
@@ -2370,9 +2277,7 @@ const allQuestions = [
 {q:"Na+Cl₂ الموزونة:",o:["Na+Cl→NaCl","2Na+Cl₂→2NaCl","2Na+2Cl→2NaCl"],c:1,e:"2Na+Cl₂",l:"التفاعلات",d:"medium"}
 ];
 
-/* ============================================================
-   🎮 Quiz
-   ============================================================ */
+/* Quiz */
 let currentQuestions=[], currentQuestion=0, score=0, userAnswers=[], weakLessons={};
 let quizMode='practice', quizTime=1800, timerInterval;
 const correctSound = document.getElementById('correct-sound');
@@ -2614,9 +2519,7 @@ document.getElementById('clear-whiteboard').addEventListener('click', function()
   showToast('استخدم أدوات Canva داخل السبورة','info');
 });
 
-/* ============================================================
-   🧮 Calculator
-   ============================================================ */
+/* Calculator */
 const ATOMIC_WEIGHTS = {H:1.008,He:4.003,Li:6.94,Be:9.012,B:10.81,C:12.011,N:14.007,O:15.999,F:18.998,Ne:20.180,Na:22.990,Mg:24.305,Al:26.982,Si:28.086,P:30.974,S:32.06,Cl:35.45,Ar:39.948,K:39.098,Ca:40.078,Sc:44.956,Ti:47.867,V:50.942,Cr:51.996,Mn:54.938,Fe:55.845,Co:58.933,Ni:58.693,Cu:63.546,Zn:65.38,Ga:69.723,Ge:72.630,As:74.922,Se:78.971,Br:79.904,Kr:83.798,Rb:85.468,Sr:87.62,Y:88.906,Zr:91.224,Nb:92.906,Mo:95.95,Tc:98,Ru:101.07,Rh:102.906,Pd:106.42,Ag:107.868,Cd:112.414,In:114.818,Sn:118.710,Sb:121.760,Te:127.60,I:126.904,Xe:131.293,Cs:132.905,Ba:137.327,La:138.905,Ce:140.116,Pr:140.908,Nd:144.242,Pm:145,Sm:150.36,Eu:151.964,Gd:157.25,Tb:158.925,Dy:162.5,Ho:164.930,Er:167.259,Tm:168.934,Yb:173.045,Lu:174.967,Hf:178.49,Ta:180.948,W:183.84,Re:186.207,Os:190.23,Ir:192.217,Pt:195.084,Au:196.967,Hg:200.592,Tl:204.38,Pb:207.2,Bi:208.980,Po:209,At:210,Rn:222,Fr:223,Ra:226,Ac:227,Th:232.038,Pa:231.036,U:238.029,Np:237,Pu:244,Am:243,Cm:247,Bk:247,Cf:251,Es:252,Fm:257,Md:258,No:259,Lr:266,Rf:267,Db:268,Sg:269,Bh:270,Hs:269,Mt:278,Ds:281,Rg:282,Cn:285,Nh:286,Fl:289,Mc:290,Lv:293,Ts:294,Og:294};
 
 function initCalculator(){
@@ -2867,29 +2770,27 @@ function calcEnergy(){
   document.getElementById('energy-result').classList.add('show');
 }
 
-/* ============================================================
-   🤖 AI Assistant (Updated for 2026 models)
-   ============================================================ */
+/* AI Assistant */
 const KNOWLEDGE = [
   {k:['ذرة','الذرة','تركيب الذرة'],a:'🔬 الذرة أصغر وحدة بنائية للمادة. تتكون من:\n\n• النواة: بروتونات (+) ونيوترونات\n• الإلكترونات: تدور في مدارات (-)\n\nعدد البروتونات = العدد الذري.'},
-  {k:['جدول دوري','الجدول الدوري'],a:'📊 الجدول الدوري تنظيم للعناصر:\n\n• 118 عنصراً\n• مرتبة حسب العدد الذري\n• 7 دورات و18 مجموعة\n\nتصفح الجدول التفاعلي مع نماذج 3D!'},
+  {k:['جدول دوري','الجدول الدوري'],a:'📊 الجدول الدوري تنظيم للعناصر:\n\n• 118 عنصراً\n• مرتبة حسب العدد الذري\n• 7 دورات و18 مجموعة\n\nتصفح الجدول التفاعلي!'},
   {k:['رابطة','روابط','الرابطة'],a:'🔗 أنواع الروابط:\n\n1. أيونية: انتقال e (NaCl)\n2. تساهمية: مشاركة e (H₂O)\n3. فلزية: بين الفلزات\n4. هيدروجينية: ضعيفة'},
   {k:['تفاعل','تفاعلات','معادلة'],a:'⚗️ التفاعل: إعادة ترتيب الذرات.\n\nالأنواع:\n• تكوين (A+B→AB)\n• تفكك (AB→A+B)\n• إحلال (A+BC→AC+B)\n• احتراق'},
   {k:['حمض','أحماض','قاعدة','قواعد'],a:'🧪 الأحماض: تُعطي H⁺\nالقواعد: تستقبل H⁺ أو تُعطي OH⁻\n\nالتعادل: حمض + قاعدة → ملح + ماء'},
   {k:['ph','pH'],a:'📏 pH = -log[H⁺]\n\n• pH<7 حمضي\n• pH=7 متعادل\n• pH>7 قاعدي\n\npOH = 14 - pH'},
   {k:['مول','المول'],a:'⚖️ المول:\n\n• 1 مول = 6.022×10²³ جزيء\n• n = m / M\n• عدد الجزيئات = n × 6.022×10²³'},
-  {k:['تركيز','مولارية'],a:'💧 M = n/V\n\nM = (m/MW)/V\n\nاستخدم الآلة الحاسبة!'},
+  {k:['تركيز','مولارية'],a:'💧 M = n/V\n\nM = (m/MW)/V'},
   {k:['ماء','H2O','h2o'],a:'💧 H₂O: جزيء قطبي، زاوية 104.5°، كتلة 18.015 g/mol'},
-  {k:['حديد','Fe'],a:'🔴 Fe (26): فلز انتقالي، يدخل في الهيموغلوبين. اقرأ التفاصيل في "الكيمياء والانسان"'},
-  {k:['كيمياء حيوية','bio'],a:'🧬 الكيمياء الحيوية: تفاعلات الجسم.\n\nاقرأ البحث في قسم "الكيمياء والانسان"'},
-  {k:['انزيم','إنزيم'],a:'🔬 الإنزيمات: محفزات حيوية تسرّع التفاعل دون استهلاك.'},
-  {k:['dna','DNA'],a:'🧬 DNA: يحمل المعلومات الوراثية. سلسلة مزدوجة. A-T، G-C.'},
-  {k:['حسابات','حساب'],a:'🧮 n = m/M، M = n/V، جزيئات = n × 6.022×10²³'},
-  {k:['اتزان','توازن'],a:'⚖️ الاتزان: معدل أمامي = عكسي. Keq = [P]/[R]'},
+  {k:['حديد','Fe'],a:'🔴 Fe (26): فلز انتقالي، يدخل في الهيموغلوبين.'},
+  {k:['كيمياء حيوية','bio'],a:'🧬 الكيمياء الحيوية: تفاعلات الجسم.'},
+  {k:['انزيم','إنزيم'],a:'🔬 الإنزيمات: محفزات حيوية.'},
+  {k:['dna','DNA'],a:'🧬 DNA: يحمل المعلومات الوراثية.'},
+  {k:['حسابات','حساب'],a:'🧮 n = m/M، M = n/V'},
+  {k:['اتزان','توازن'],a:'⚖️ الاتزان: معدل أمامي = عكسي'},
   {k:['قانون حفظ الكتلة'],a:'⚖️ المادة لا تفنى ولا تستحدث.'},
-  {k:['سلام','مرحبا','اهلا'],a:'👋 أهلاً! أنا كيميائي AI. اسأل عن: ذرة، تفاعل، حمض، pH، مول، أي موضوع كيميائي!'},
+  {k:['سلام','مرحبا','اهلا'],a:'👋 أهلاً! أنا كيميائي AI.'},
   {k:['شكرا','thanks'],a:'🌟 على الرحب والسعة!'},
-  {k:['من انت','من أنت'],a:'🤖 أنا كيميائي AI، مساعدك الذكي في الكيمياء. يمكن تفعيلي بـ Groq أو Gemini من الإعدادات.'}
+  {k:['من انت','من أنت'],a:'🤖 أنا كيميائي AI، مساعدك الذكي.'}
 ];
 
 let chatMessages = [];
@@ -2898,7 +2799,7 @@ function initChat(){
   const saved = localStorage.getItem('chemChat');
   if(saved){ try { chatMessages = JSON.parse(saved); } catch { chatMessages = []; } }
   if(!chatMessages.length){
-    chatMessages.push({role:'bot', text:'👋 أهلاً! أنا كيميائي AI. كيف أستطيع مساعدتك اليوم؟\n\nاسأل عن:\n• الذرة والجدول الدوري\n• التفاعلات والروابط\n• الأحماض والقواعد\n• أي موضوع كيميائي', html:true});
+    chatMessages.push({role:'bot', text:'👋 أهلاً! أنا كيميائي AI. كيف أستطيع مساعدتك اليوم؟', html:true});
   }
   renderChat();
   updateAIStatus();
@@ -2919,7 +2820,7 @@ function updateAIStatus(){
   const s = JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}');
   const status = document.getElementById('ai-status');
   if(!status) return;
-  if(s.aiProvider === 'groq' && s.groqKey) status.textContent = '🟢 Groq AI';
+  if(s.aiProvider === 'groq' && s.groqKey) status.textContent = '🟢 Groq AI — GPT-OSS-120B';
   else if(s.aiProvider === 'gemini' && s.geminiKey) status.textContent = '🟢 Google Gemini';
   else status.textContent = '🟢 جاهز — قاعدة معرفة داخلية';
 }
@@ -2977,7 +2878,7 @@ async function sendChat(){
     addChatMessage('bot', response, s.aiProvider && s.aiProvider !== 'internal');
   } catch(err){
     hideTyping();
-    addChatMessage('bot', '⚠️ حدث خطأ: ' + err.message + '\n\nسأجيب من قاعدة المعرفة:\n\n' + getInternalResponse(text));
+    addChatMessage('bot', '⚠️ ' + err.message + '\n\nسأجيب من قاعدة المعرفة:\n\n' + getInternalResponse(text));
   }
 }
 
@@ -3007,19 +2908,16 @@ function getInternalResponse(q){
     if(score > bestScore){ bestScore = score; best = k; }
   });
   if(best && bestScore > 0) return best.a;
-  return `🤔 لم أجد إجابة دقيقة.\n\nجرّب:\n• إعادة صياغة السؤال\n• كلمات مفتاحية: ذرة، تفاعل، حمض، pH، مول\n• أو شغّل الذكاء الاصطناعي الحقيقي من الإعدادات`;
+  return `🤔 لم أجد إجابة دقيقة.\n\nجرّب:\n• إعادة صياغة السؤال\n• كلمات مفتاحية: ذرة، تفاعل، حمض، pH، مول\n• أو شغّل AI الحقيقي من الإعدادات`;
 }
 
-/* ============================================================
-   🚀 callGroq — يجرب عدة نماذج تلقائياً
-   ============================================================ */
+/* Groq — GPT-OSS-120B (الأقوى والمجاني حالياً) */
 async function callGroq(prompt, key){
   const models = [
-    'llama-3.3-70b-versatile',
-    'llama-3.1-70b-versatile',
-    'llama-3.1-8b-instant',
-    'mixtral-8x7b-32768',
-    'gemma2-9b-it'
+    'openai/gpt-oss-120b',      // الأقوى والمجاني
+    'openai/gpt-oss-20b',       // أخف وأسرع
+    'llama-3.3-70b-versatile',  // احتياطي
+    'llama-3.1-8b-instant'      // احتياطي
   ];
   
   const savedModel = JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}').groqModel;
@@ -3055,7 +2953,7 @@ async function callGroq(prompt, key){
       lastError = `${model}: ${res.status}`;
       
       if(res.status === 401 || res.status === 403){
-        throw new Error('المفتاح غير صحيح أو منتهي الصلاحية');
+        throw new Error('المفتاح غير صحيح أو منتهي');
       }
     } catch(e){
       lastError = e.message;
@@ -3066,9 +2964,7 @@ async function callGroq(prompt, key){
   throw new Error('جميع النماذج فشلت. آخر خطأ: ' + lastError);
 }
 
-/* ============================================================
-   🚀 callGemini — محدث لنماذج 2026
-   ============================================================ */
+/* Gemini — نماذج 2026 */
 async function callGemini(prompt, key){
   const models = [
     'gemini-2.5-flash',
@@ -3101,11 +2997,10 @@ async function callGemini(prompt, key){
         return data.candidates[0].content.parts[0].text;
       }
       
-      const errText = await res.text();
       lastError = `${model}: ${res.status}`;
       
       if(res.status === 401 || res.status === 403){
-        throw new Error('المفتاح غير صحيح أو منتهي الصلاحية');
+        throw new Error('المفتاح غير صحيح أو منتهي');
       }
     } catch(e){
       lastError = e.message;
@@ -3119,7 +3014,7 @@ async function callGemini(prompt, key){
 function openAISettings(){ openAIModal(); }
 function openAIModal(){
   const s = JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}');
-  document.getElementById('ai-modal-provider').value = s.aiProvider || 'internal';
+  document.getElementById('ai-modal-provider').value = s.aiProvider || 'groq';
   document.getElementById('ai-modal-groq').value = s.groqKey || '';
   document.getElementById('ai-modal-gemini').value = s.geminiKey || '';
   document.getElementById('ai-modal-overlay').classList.add('active');
@@ -3136,9 +3031,7 @@ function saveAIModal(){
   showToast('✅ تم الحفظ','success');
 }
 
-/* ============================================================
-   🛠️ Utilities
-   ============================================================ */
+/* Utilities */
 function showToast(msg, type='info'){
   const t = document.getElementById('toast');
   const icon = type === 'success' ? 'check-circle' : type === 'error' ? 'times-circle' : 'info-circle';
