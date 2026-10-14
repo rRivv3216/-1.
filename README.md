@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>منصة الكيمياء التفاعلية v3.0</title>
+<title>منصة الكيمياء التفاعلية v3.1</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -23,7 +23,7 @@ body.no-anim *{animation:none!important;transition:none!important}
 body.light{background:#f1f5f9;color:#0f172a}
 body.light .bg-gradient-overlay{background:radial-gradient(ellipse at 20% 10%,rgba(99,102,241,.15) 0%,transparent 55%),radial-gradient(ellipse at 80% 90%,rgba(139,92,246,.12) 0%,transparent 55%)}
 body.light #bg-canvas{opacity:.4}
-body.light .sidebar,body.light .header,body.light .card,body.light .settings-container,body.light .quiz-setup,body.light .quiz-content,body.light .whiteboard-container,body.light .progress-history,body.light .stat-card,body.light .research-section,body.light .research-toc,body.light .notifications-container,body.light .profile-container,body.light .simulation-container,body.light .advanced-report,body.light .chat-container,body.light .calc-container,body.light .periodic-container{background:rgba(255,255,255,.85);border-color:rgba(0,0,0,.08);color:#0f172a}
+body.light .sidebar,body.light .header,body.light .card,body.light .settings-container,body.light .quiz-setup,body.light .quiz-content,body.light .whiteboard-container,body.light .stat-card,body.light .research-section,body.light .research-toc,body.light .notifications-container,body.light .profile-container,body.light .simulation-container,body.light .advanced-report,body.light .chat-container,body.light .calc-container,body.light .periodic-container{background:rgba(255,255,255,.85);border-color:rgba(0,0,0,.08);color:#0f172a}
 body.light .header h2,body.light .card h3,body.light .settings-group h3,body.light .stat-card h3,body.light .welcome-screen h1,body.light .greeting-text h1,body.light .research-hero h1,body.light .research-section h3,body.light .subsection h4,body.light .element-info-title h2,body.light .profile-name,body.light .notification-title{color:#0f172a}
 body.light .card p,body.light .welcome-screen p,body.light .setting-info p,body.light .subsection p,body.light .subsection li{color:#475569}
 body.light .nav-link{color:#475569}
@@ -244,23 +244,11 @@ input:checked + .slider:before{transform:translateX(24px)}
 .improvement-tips h4{color:#6ee7b7;margin-bottom:10px;display:flex;align-items:center;gap:10px;font-size:.95em}
 .improvement-tips ul{padding-right:20px}
 .improvement-tips li{margin-bottom:6px;line-height:1.7}
-.progress-stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin-bottom:22px}
 .stat-card{background:rgba(15,23,42,.65);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:18px;padding:20px;text-align:center;transition:var(--transition)}
 .stat-card:hover{transform:translateY(-4px);border-color:rgba(99,102,241,.4);box-shadow:0 15px 40px rgba(99,102,241,.2)}
 .stat-card i{font-size:2em;background:linear-gradient(135deg,var(--primary),var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px}
 .stat-card h3{color:#94a3b8;margin-bottom:8px;font-size:.82em;font-weight:600}
 .stat-card .stat-value{font-size:1.7em;font-weight:800;background:linear-gradient(135deg,var(--cyan),var(--primary));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.progress-history{background:rgba(15,23,42,.65);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:20px;padding:22px;overflow-x:auto}
-.progress-history h3{color:#f1f5f9;margin-bottom:16px;display:flex;align-items:center;gap:10px;font-size:1em}
-.history-table{width:100%;border-collapse:collapse;min-width:600px}
-.history-table th,.history-table td{padding:12px;text-align:right;border-bottom:1px solid rgba(255,255,255,.06);font-size:.85em;color:#cbd5e1}
-.history-table th{background:rgba(255,255,255,.03);color:#f1f5f9;font-weight:700}
-.history-table tr:hover{background:rgba(99,102,241,.05)}
-.history-table tr:last-child td{border-bottom:none}
-.score-badge{padding:4px 10px;border-radius:20px;font-weight:700;color:#fff;font-size:.8em;display:inline-block}
-.score-high{background:linear-gradient(135deg,var(--success),#059669)}
-.score-medium{background:linear-gradient(135deg,var(--warning),#d97706)}
-.score-low{background:linear-gradient(135deg,var(--danger),#dc2626)}
 .notifications-container{background:rgba(15,23,42,.65);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:20px;padding:20px;max-height:600px;overflow-y:auto}
 .notification-item{padding:14px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:flex-start;gap:12px;transition:var(--transition);cursor:pointer;border-radius:10px}
 .notification-item:hover{background:rgba(255,255,255,.04)}
@@ -366,7 +354,6 @@ input:checked + .slider:before{transform:translateX(24px)}
 .modal h3{color:#f1f5f9;margin-bottom:14px;display:flex;align-items:center;gap:10px;font-size:1.1em}
 .modal p{color:#94a3b8;margin-bottom:20px;line-height:1.7;font-size:.9em}
 .modal-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
-/* Chat Bot */
 .chat-container{background:rgba(15,23,42,.65);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:20px;padding:0;display:flex;flex-direction:column;height:calc(100vh - 220px);min-height:500px;overflow:hidden}
 .chat-header{padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .chat-header .avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--cyan));display:flex;align-items:center;justify-content:center;font-size:1.2em;color:#fff}
@@ -390,7 +377,6 @@ input:checked + .slider:before{transform:translateX(24px)}
 .chat-suggestions{display:flex;gap:8px;padding:10px 14px;overflow-x:auto;border-top:1px solid rgba(255,255,255,.05);flex-wrap:wrap}
 .chat-suggestion{padding:7px 14px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.25);border-radius:20px;color:#c7d2fe;font-size:.78em;cursor:pointer;white-space:nowrap;transition:var(--transition)}
 .chat-suggestion:hover{background:rgba(99,102,241,.25);color:#fff}
-/* Calculator */
 .calc-container{background:rgba(15,23,42,.65);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:20px;padding:24px}
 .calc-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;padding:5px;background:rgba(255,255,255,.04);border-radius:14px;overflow-x:auto}
 .calc-tab{padding:10px 16px;background:transparent;border:none;color:#94a3b8;border-radius:10px;cursor:pointer;font-size:.85em;font-weight:600;font-family:inherit;transition:var(--transition);white-space:nowrap;display:flex;align-items:center;gap:6px}
@@ -412,7 +398,6 @@ input:checked + .slider:before{transform:translateX(24px)}
 .calc-result-value{color:#6ee7b7;font-size:1.5em;font-weight:800;font-family:'Courier New',monospace;word-break:break-word}
 .calc-result-detail{color:#cbd5e1;font-size:.82em;margin-top:10px;line-height:1.7}
 .calc-help{font-size:.78em;color:#64748b;margin-top:8px;line-height:1.6}
-/* Periodic Table */
 .periodic-container{background:rgba(15,23,42,.65);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:20px;padding:20px;overflow-x:auto}
 .periodic-legend{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;padding:12px;background:rgba(255,255,255,.03);border-radius:12px}
 .legend-item{display:flex;align-items:center;gap:6px;font-size:.75em;color:#cbd5e1;cursor:pointer;padding:4px 8px;border-radius:8px;transition:var(--transition)}
@@ -423,7 +408,6 @@ input:checked + .slider:before{transform:translateX(24px)}
 .pt-element:hover{transform:scale(1.15);z-index:10;box-shadow:0 8px 25px rgba(0,0,0,.5);border:2px solid #fff}
 .pt-element .symbol{font-size:.95em;line-height:1}
 .pt-element .num{font-size:.6em;position:absolute;top:3px;right:5px;opacity:.85}
-.pt-element .mass{font-size:.5em;opacity:.7;line-height:1}
 .pt-element .name{font-size:.5em;opacity:.85;line-height:1;text-align:center;overflow:hidden;white-space:nowrap;max-width:100%;text-overflow:ellipsis}
 .pt-spacer{visibility:hidden}
 .pt-category-alkali{background:linear-gradient(135deg,#f43f5e,#be123c)}
@@ -438,7 +422,6 @@ input:checked + .slider:before{transform:translateX(24px)}
 .pt-category-actinide{background:linear-gradient(135deg,#d946ef,#86198f)}
 .pt-category-unknown{background:linear-gradient(135deg,#64748b,#334155)}
 .pt-info-panel{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;margin-top:16px;min-height:100px;display:flex;align-items:center;justify-content:center;text-align:center;color:#94a3b8;font-size:.9em}
-/* 3D Modal */
 .modal-3d{max-width:920px!important;width:95%!important;padding:0!important;overflow:hidden;background:rgba(8,12,26,.98)!important}
 .modal-3d-header{padding:18px 24px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .modal-3d-header h3{color:#f1f5f9;font-size:1.15em;font-weight:700;margin:0;display:flex;align-items:center;gap:10px}
@@ -491,7 +474,7 @@ input:checked + .slider:before{transform:translateX(24px)}
 <canvas id="bg-canvas"></canvas>
 <div class="bg-gradient-overlay"></div>
 
-<!-- Auth Screen -->
+<!-- Auth -->
 <div class="auth-screen active" id="auth">
   <div class="auth-container">
     <div class="auth-logo"><i class="fas fa-atom"></i></div>
@@ -586,7 +569,6 @@ input:checked + .slider:before{transform:translateX(24px)}
       <li class="nav-item"><a href="#/ai-assistant" class="nav-link" data-screen="ai-assistant"><i class="fas fa-robot"></i><span>المساعد الذكي</span></a></li>
       <li class="nav-item"><a href="#/quiz-setup" class="nav-link" data-screen="quiz-setup"><i class="fas fa-file-alt"></i><span>الاختبارات</span></a></li>
       <li class="nav-item"><a href="#/simulation" class="nav-link" data-screen="simulation"><i class="fas fa-flask"></i><span>المحاكاة</span></a></li>
-      <li class="nav-item"><a href="#/progress" class="nav-link" data-screen="progress"><i class="fas fa-chart-line"></i><span>التقدم</span></a></li>
       <li class="nav-item"><a href="#/settings" class="nav-link" data-screen="settings"><i class="fas fa-cog"></i><span>الإعدادات</span></a></li>
     </ul>
     <div class="team-section">
@@ -670,11 +652,6 @@ input:checked + .slider:before{transform:translateX(24px)}
           <div class="card-header"><div class="card-icon"><i class="fas fa-flask"></i></div><h3>المحاكاة والتجارب</h3></div>
           <p>قم بتجربة التفاعلات الكيميائية افتراضياً في مختبر آمن مع شرح مفصل</p>
           <button class="btn btn-cyan"><i class="fas fa-vial"></i> ابدأ المحاكاة</button>
-        </div>
-        <div class="card card-4" onclick="navigateTo('progress')">
-          <div class="card-header"><div class="card-icon"><i class="fas fa-chart-line"></i></div><h3>تتبع التقدم</h3></div>
-          <p>راجع إحصائيات أدائك، تتبع تقدمك التعليمي، واحصل على توصيات مخصصة</p>
-          <button class="btn btn-danger"><i class="fas fa-chart-bar"></i> عرض التقارير</button>
         </div>
       </div>
     </div>
@@ -953,17 +930,17 @@ input:checked + .slider:before{transform:translateX(24px)}
 
         <div class="calc-panel" id="calc-dilution">
           <h3><i class="fas fa-tint"></i> حاسبة التخفيف</h3>
-          <p class="calc-desc">C₁ × V₁ = C₂ × V₂ — أدخل 3 قيم لحساب الرابعة</p>
+          <p class="calc-desc">C₁ × V₁ = C₂ × V₂ — اترك حقل واحد فارغ</p>
           <div class="calc-form">
             <div class="calc-form-row">
-              <div class="calc-field"><label>C₁ (التركيز الأول)</label><input type="number" id="d-c1" placeholder="M₁" step="any"></div>
-              <div class="calc-field"><label>V₁ (الحجم الأول)</label><input type="number" id="d-v1" placeholder="L أو mL" step="any"></div>
+              <div class="calc-field"><label>C₁</label><input type="number" id="d-c1" placeholder="M₁" step="any"></div>
+              <div class="calc-field"><label>V₁</label><input type="number" id="d-v1" placeholder="L أو mL" step="any"></div>
             </div>
             <div class="calc-form-row">
-              <div class="calc-field"><label>C₂ (التركيز الثاني)</label><input type="number" id="d-c2" placeholder="M₂" step="any"></div>
-              <div class="calc-field"><label>V₂ (الحجم الثاني)</label><input type="number" id="d-v2" placeholder="L أو mL" step="any"></div>
+              <div class="calc-field"><label>C₂</label><input type="number" id="d-c2" placeholder="M₂" step="any"></div>
+              <div class="calc-field"><label>V₂</label><input type="number" id="d-v2" placeholder="L أو mL" step="any"></div>
             </div>
-            <button class="btn" onclick="calcDilution()"><i class="fas fa-equals"></i> احسب القيمة الناقصة</button>
+            <button class="btn" onclick="calcDilution()"><i class="fas fa-equals"></i> احسب</button>
           </div>
           <div class="calc-result" id="dilution-result">
             <div class="calc-result-label">القيمة المحسوبة</div>
@@ -974,7 +951,7 @@ input:checked + .slider:before{transform:translateX(24px)}
 
         <div class="calc-panel" id="calc-gas">
           <h3><i class="fas fa-wind"></i> قانون الغاز المثالي</h3>
-          <p class="calc-desc">PV = nRT — اترك الحقل المراد حسابه فارغاً. R = 0.0821 L·atm/(mol·K)</p>
+          <p class="calc-desc">PV = nRT — اترك حقل واحد فارغ. R = 0.0821</p>
           <div class="calc-form">
             <div class="calc-form-row">
               <div class="calc-field"><label>P (atm)</label><input type="number" id="g-p" step="any"></div>
@@ -984,7 +961,7 @@ input:checked + .slider:before{transform:translateX(24px)}
               <div class="calc-field"><label>n (مول)</label><input type="number" id="g-n" step="any"></div>
               <div class="calc-field"><label>T (K)</label><input type="number" id="g-t" step="any"></div>
             </div>
-            <button class="btn" onclick="calcGas()"><i class="fas fa-equals"></i> احسب الحقل الفارغ</button>
+            <button class="btn" onclick="calcGas()"><i class="fas fa-equals"></i> احسب</button>
           </div>
           <div class="calc-result" id="gas-result">
             <div class="calc-result-label">النتيجة</div>
@@ -997,10 +974,10 @@ input:checked + .slider:before{transform:translateX(24px)}
           <h3><i class="fas fa-balance-scale"></i> موازن المعادلات</h3>
           <p class="calc-desc">أدخل المعادلة بصيغة: H2 + O2 = H2O</p>
           <div class="calc-form">
-            <div class="calc-field"><label>المعادلة الكيميائية</label><input type="text" id="balance-eq" placeholder="H2 + O2 = H2O" value="H2 + O2 = H2O"></div>
-            <button class="btn" onclick="calcBalance()"><i class="fas fa-equals"></i> وازن المعادلة</button>
+            <div class="calc-field"><label>المعادلة</label><input type="text" id="balance-eq" placeholder="H2 + O2 = H2O" value="H2 + O2 = H2O"></div>
+            <button class="btn" onclick="calcBalance()"><i class="fas fa-equals"></i> وازن</button>
           </div>
-          <div class="calc-help">💡 استخدم '=' أو '->' للفصل بين المتفاعلات والنواتج</div>
+          <div class="calc-help">💡 استخدم '=' أو '->' للفصل</div>
           <div class="calc-result" id="balance-result">
             <div class="calc-result-label">المعادلة الموزونة</div>
             <div class="calc-result-value" id="balance-value">-</div>
@@ -1010,17 +987,17 @@ input:checked + .slider:before{transform:translateX(24px)}
 
         <div class="calc-panel" id="calc-conc">
           <h3><i class="fas fa-vial"></i> حاسبة التركيز</h3>
-          <p class="calc-desc">احسب المولارية أو المولالية من الكتلة والحجم</p>
+          <p class="calc-desc">احسب المولارية من الكتلة والحجم</p>
           <div class="calc-form">
             <div class="calc-form-row">
               <div class="calc-field"><label>الكتلة (g)</label><input type="number" id="c-mass" step="any"></div>
               <div class="calc-field"><label>الكتلة المولية (g/mol)</label><input type="number" id="c-mw" step="any"></div>
             </div>
             <div class="calc-field"><label>الحجم (L)</label><input type="number" id="c-vol" step="any"></div>
-            <button class="btn" onclick="calcConc()"><i class="fas fa-equals"></i> احسب التركيز (M)</button>
+            <button class="btn" onclick="calcConc()"><i class="fas fa-equals"></i> احسب</button>
           </div>
           <div class="calc-result" id="conc-result">
-            <div class="calc-result-label">التركيز المولاري</div>
+            <div class="calc-result-label">التركيز</div>
             <div class="calc-result-value" id="conc-value">-</div>
             <div class="calc-result-detail" id="conc-detail"></div>
           </div>
@@ -1028,14 +1005,14 @@ input:checked + .slider:before{transform:translateX(24px)}
 
         <div class="calc-panel" id="calc-convert">
           <h3><i class="fas fa-exchange-alt"></i> تحويلات المول</h3>
-          <p class="calc-desc">حوّل بين: الكتلة (g) ← المول ← عدد الجزيئات</p>
+          <p class="calc-desc">حوّل بين: g ← mol ← جزيئات</p>
           <div class="calc-form">
             <div class="calc-form-row">
               <div class="calc-field"><label>القيمة</label><input type="number" id="cv-val" step="any" value="1"></div>
-              <div class="calc-field"><label>الكتلة المولية (g/mol)</label><input type="number" id="cv-mw" step="any" value="18"></div>
+              <div class="calc-field"><label>الكتلة المولية</label><input type="number" id="cv-mw" step="any" value="18"></div>
             </div>
-            <div class="calc-field"><label>نوع القيمة المدخلة</label>
-              <select id="cv-type"><option value="g">كتلة (g)</option><option value="mol">مول</option><option value="atoms">عدد جزيئات (×6.022×10²³)</option></select>
+            <div class="calc-field"><label>نوع القيمة</label>
+              <select id="cv-type"><option value="g">كتلة (g)</option><option value="mol">مول</option><option value="atoms">عدد جزيئات</option></select>
             </div>
             <button class="btn" onclick="calcConvert()"><i class="fas fa-equals"></i> حول</button>
           </div>
@@ -1048,7 +1025,7 @@ input:checked + .slider:before{transform:translateX(24px)}
 
         <div class="calc-panel" id="calc-energy">
           <h3><i class="fas fa-bolt"></i> حاسبة الطاقة</h3>
-          <p class="calc-desc">E = m × c × ΔT (حرارة) أو E = mc² (كتلة-طاقة)</p>
+          <p class="calc-desc">E = m×c×ΔT أو E = mc² أو E = hf</p>
           <div class="calc-form">
             <div class="calc-field"><label>نوع الحساب</label>
               <select id="e-type" onchange="toggleEnergyFields()">
@@ -1074,7 +1051,7 @@ input:checked + .slider:before{transform:translateX(24px)}
       <div class="header">
         <h2><i class="fas fa-robot"></i> المساعد الذكي</h2>
         <div class="user-actions">
-          <button class="btn btn-outline" id="ai-settings-btn" onclick="openAISettings()"><i class="fas fa-key"></i> إعدادات API</button>
+          <button class="btn btn-outline" onclick="openAISettings()"><i class="fas fa-key"></i> إعدادات API</button>
           <button class="btn btn-outline" onclick="clearChat()"><i class="fas fa-trash"></i> مسح</button>
         </div>
       </div>
@@ -1084,9 +1061,6 @@ input:checked + .slider:before{transform:translateX(24px)}
           <div class="info">
             <h3>كيميائي AI</h3>
             <p id="ai-status">🟢 جاهز — قاعدة معرفة داخلية</p>
-          </div>
-          <div class="chat-header-actions">
-            <button class="btn btn-outline btn-sm" onclick="sendSuggestion('ما هو الجدول الدوري؟')">اقتراح سريع</button>
           </div>
         </div>
         <div class="chat-msgs" id="chat-msgs"></div>
@@ -1193,30 +1167,8 @@ input:checked + .slider:before{transform:translateX(24px)}
         </div>
         <div class="quiz-controls" style="margin-top:22px;">
           <button class="btn" onclick="navigateTo('quiz-setup')"><i class="fas fa-redo"></i> اختبار جديد</button>
-          <button class="btn btn-outline" onclick="navigateTo('progress')"><i class="fas fa-chart-line"></i> التقدم</button>
           <button class="btn btn-outline" onclick="navigateTo('welcome')"><i class="fas fa-home"></i> الرئيسية</button>
         </div>
-      </div>
-    </div>
-
-    <!-- Progress -->
-    <div class="screen" id="progress">
-      <div class="header">
-        <h2><i class="fas fa-chart-line"></i> تتبع التقدم</h2>
-        <div class="user-actions"><button class="btn btn-outline" onclick="navigateTo('welcome')"><i class="fas fa-arrow-right"></i> العودة</button></div>
-      </div>
-      <div class="progress-stats">
-        <div class="stat-card"><i class="fas fa-chart-bar"></i><h3>متوسط النتائج</h3><div class="stat-value" id="average-score">0%</div></div>
-        <div class="stat-card"><i class="fas fa-check-circle"></i><h3>أفضل نتيجة</h3><div class="stat-value" id="best-score">0%</div></div>
-        <div class="stat-card"><i class="fas fa-list-ol"></i><h3>عدد الاختبارات</h3><div class="stat-value" id="total-quizzes">0</div></div>
-        <div class="stat-card"><i class="fas fa-clock"></i><h3>إجمالي الوقت</h3><div class="stat-value" id="total-time">0 د</div></div>
-      </div>
-      <div class="progress-history">
-        <h3><i class="fas fa-history"></i> تاريخ الاختبارات</h3>
-        <table class="history-table">
-          <thead><tr><th>التاريخ</th><th>النوع</th><th>النتيجة</th><th>الوقت</th><th>الأسئلة</th></tr></thead>
-          <tbody id="quiz-history"></tbody>
-        </table>
       </div>
     </div>
 
@@ -1272,19 +1224,19 @@ input:checked + .slider:before{transform:translateX(24px)}
             <h3><i class="fas fa-key"></i> مفاتيح API للذكاء الاصطناعي</h3>
             <p style="color:#94a3b8;font-size:.85em;margin-bottom:16px;line-height:1.7;">لتفعيل الذكاء الاصطناعي الحقيقي، أدخل مفتاح API مجاني من Groq أو Google Gemini. سيتم حفظ المفتاح في جهازك فقط. إذا لم تُدخل مفتاحاً، سيعمل المساعد بقاعدة معرفة داخلية شاملة.</p>
             <div class="setting-item">
-              <div class="setting-info"><h4>مزود الخدمة</h4><p>اختر Groq (أسرع) أو Gemini (Google)</p></div>
-              <select id="ai-provider"><option value="internal">داخلي (بدون API)</option><option value="groq">Groq (Llama 3.3)</option><option value="gemini">Google Gemini</option></select>
+              <div class="setting-info"><h4>مزود الخدمة</h4><p>Groq (أسرع) أو Gemini (Google)</p></div>
+              <select id="ai-provider"><option value="internal">داخلي (بدون API)</option><option value="groq">Groq</option><option value="gemini">Google Gemini</option></select>
             </div>
             <div class="setting-item">
-              <div class="setting-info"><h4>Groq API Key</h4><p>احصل عليه من console.groq.com (مجاني)</p></div>
+              <div class="setting-info"><h4>Groq API Key</h4><p>من console.groq.com (مجاني)</p></div>
               <input type="password" id="ai-groq-key" placeholder="gsk_..." style="min-width:250px;">
             </div>
             <div class="setting-item">
-              <div class="setting-info"><h4>Gemini API Key</h4><p>احصل عليه من aistudio.google.com (مجاني)</p></div>
+              <div class="setting-info"><h4>Gemini API Key</h4><p>من aistudio.google.com (مجاني)</p></div>
               <input type="password" id="ai-gemini-key" placeholder="AIza..." style="min-width:250px;">
             </div>
             <div class="setting-item">
-              <div class="setting-info"><h4>حفظ المفاتيح</h4><p>حفظ في المتصفح لاستخدامها لاحقاً</p></div>
+              <div class="setting-info"><h4>حفظ المفاتيح</h4><p>حفظ في المتصفح</p></div>
               <button class="btn" onclick="saveAIKeys()"><i class="fas fa-save"></i> حفظ المفاتيح</button>
             </div>
           </div>
@@ -1319,7 +1271,6 @@ input:checked + .slider:before{transform:translateX(24px)}
             <div class="setting-item"><div class="setting-info"><h4>حجم البيانات</h4><p id="data-size">-- KB</p></div><button class="btn btn-outline" onclick="calculateDataSize()"><i class="fas fa-calculator"></i> حساب</button></div>
             <div class="setting-item"><div class="setting-info"><h4>تصدير البيانات</h4><p>تنزيل نسخة احتياطية</p></div><button class="btn btn-outline" id="export-data"><i class="fas fa-download"></i> تصدير</button></div>
             <div class="setting-item"><div class="setting-info"><h4>استيراد</h4><p>استعادة نسخة</p></div><label class="btn btn-outline" style="cursor:pointer;"><i class="fas fa-upload"></i> استيراد<input type="file" id="import-file" accept=".json" hidden></label></div>
-            <div class="setting-item"><div class="setting-info"><h4>مسح سجل الاختبارات</h4><p>حذف النتائج فقط</p></div><button class="btn btn-warning" onclick="clearResults()"><i class="fas fa-history"></i> مسح السجل</button></div>
             <div class="setting-item"><div class="setting-info"><h4>حذف جميع البيانات</h4><p>مسح كل شيء</p></div><button class="btn btn-danger" onclick="clearAllData()"><i class="fas fa-trash"></i> حذف الكل</button></div>
           </div>
         </div>
@@ -1343,7 +1294,7 @@ input:checked + .slider:before{transform:translateX(24px)}
         <iframe src="https://phet.colorado.edu/sims/html/balancing-chemical-equations/latest/balancing-chemical-equations_ar.html" class="simulation-frame" allowfullscreen></iframe>
         <div class="simulation-info">
           <h3><i class="fas fa-info-circle"></i> معلومات عن المحاكاة</h3>
-          <p>مقدمة من مشروع PhET التفاعلي بجامعة كولورادو. يمكنك استخدامها لموازنة المعادلات الكيميائية وفهم مبدأ حفظ الكتلة في التفاعلات.</p>
+          <p>مقدمة من مشروع PhET التفاعلي بجامعة كولورادو.</p>
         </div>
       </div>
     </div>
@@ -1394,7 +1345,7 @@ input:checked + .slider:before{transform:translateX(24px)}
   </main>
 </div>
 
-<!-- Modal (generic) -->
+<!-- Modal -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal">
     <h3 id="modal-title">تأكيد</h3>
@@ -1430,14 +1381,15 @@ input:checked + .slider:before{transform:translateX(24px)}
     <div class="setting-item"><div class="setting-info"><h4>المزود</h4></div>
       <select id="ai-modal-provider" style="min-width:200px;">
         <option value="internal">داخلي (بدون API)</option>
-        <option value="groq">Groq (Llama 3.3)</option>
+        <option value="groq">Groq</option>
         <option value="gemini">Google Gemini</option>
       </select>
     </div>
     <div class="setting-item"><div class="setting-info"><h4>Groq Key</h4></div><input type="password" id="ai-modal-groq" placeholder="gsk_..." style="min-width:250px;"></div>
     <div class="setting-item"><div class="setting-info"><h4>Gemini Key</h4></div><input type="password" id="ai-modal-gemini" placeholder="AIza..." style="min-width:250px;"></div>
     <div class="calc-help" style="margin:16px 0;">
-      💡 <strong>Groq:</strong> مجاني 100% من <a href="https://console.groq.com" target="_blank" style="color:var(--cyan);">console.groq.com</a> بدون بطاقة بنكية
+      💡 <strong>Groq:</strong> من <a href="https://console.groq.com" target="_blank" style="color:var(--cyan);">console.groq.com</a> — مجاني<br>
+      💡 <strong>Gemini:</strong> من <a href="https://aistudio.google.com/app/apikey" target="_blank" style="color:var(--cyan);">aistudio.google.com</a> — مجاني
     </div>
     <div class="modal-actions">
       <button class="btn btn-outline" onclick="closeAIModal()">إلغاء</button>
@@ -1455,7 +1407,7 @@ input:checked + .slider:before{transform:translateX(24px)}
 
 <script>
 /* ============================================================
-   🌌 Interactive Background
+   🌌 Background
    ============================================================ */
 (function(){
   const canvas = document.getElementById('bg-canvas');
@@ -1507,7 +1459,7 @@ input:checked + .slider:before{transform:translateX(24px)}
 /* ============================================================
    🧭 Router
    ============================================================ */
-const VALID_SCREENS = ['auth','welcome','chemistry-human','periodic-table','calculator','ai-assistant','quiz-setup','quiz','results','progress','settings','simulation','notifications','profile'];
+const VALID_SCREENS = ['auth','welcome','chemistry-human','periodic-table','calculator','ai-assistant','quiz-setup','quiz','results','settings','simulation','notifications','profile'];
 function getScreenFromHash(){
   let h = window.location.hash.replace(/^#\/?/,'');
   return VALID_SCREENS.includes(h) ? h : (h ? 'welcome' : 'auth');
@@ -1541,7 +1493,6 @@ function showScreenInternal(id){
   if(t) t.classList.add('active');
   const l=document.querySelector(`.nav-link[data-screen="${id}"]`);
   if(l) l.classList.add('active');
-  if(id==='progress') updateProgressUI();
   if(id==='notifications') renderNotifications();
   if(id==='profile') updateProfileUI();
   if(id==='settings') loadSettingsUI();
@@ -1567,8 +1518,7 @@ document.getElementById('url-indicator').addEventListener('click',function(){
 });
 
 /* ============================================================
-   📊 Periodic Table Data (118 elements)
-   Format: [Z, Symbol, Name AR, Name EN, Mass, Category, Group, Period, Shells]
+   📊 Periodic Table Data
    ============================================================ */
 const PT = [
 [1,'H','الهيدروجين','Hydrogen',1.008,'nonmetal',1,1,'1'],
@@ -1712,8 +1662,6 @@ function renderPeriodicTable(){
   if(grid.dataset.rendered) return;
   grid.dataset.rendered = '1';
   grid.innerHTML = '';
-  
-  // Legend
   const legend = document.getElementById('pt-legend');
   if(legend && !legend.dataset.rendered){
     legend.dataset.rendered = '1';
@@ -1721,8 +1669,6 @@ function renderPeriodicTable(){
       `<div class="legend-item"><div class="legend-dot" style="background:${v.color}"></div>${v.ar}</div>`
     ).join('');
   }
-  
-  // Create position map
   const positions = {};
   PT.forEach(el => {
     const [z, sym, ar, en, mass, cat, group, period, shells] = el;
@@ -1731,8 +1677,6 @@ function renderPeriodicTable(){
     if(cat === 'actinide'){ row = 10; col = group - 2; }
     positions[z] = {row, col};
   });
-  
-  // Render grid (rows 1-10, cols 1-18)
   for(let r=1; r<=10; r++){
     for(let c=1; c<=18; c++){
       const found = PT.find(el => {
@@ -1753,8 +1697,6 @@ function renderPeriodicTable(){
       grid.appendChild(div);
     }
   }
-  
-  // Search
   const searchInp = document.getElementById('pt-search');
   if(searchInp && !searchInp.dataset.bound){
     searchInp.dataset.bound = '1';
@@ -1783,17 +1725,11 @@ function openElement3D(z){
   const [num, sym, nameAr, nameEn, mass, cat, group, period, shellsStr] = el;
   const shells = shellsStr.split(',').map(Number);
   const catInfo = CATEGORIES[cat];
-  
   document.getElementById('modal-3d-title').innerHTML = `<i class="fas fa-atom"></i> ${nameAr} (${sym})`;
-  
-  // Build info panel
   document.getElementById('atomic-info').innerHTML = `
     <div style="display:flex;gap:14px;align-items:center;margin-bottom:12px;">
       <div class="symbol-box" style="background:linear-gradient(135deg,${catInfo.color},${catInfo.color}aa);">${sym}</div>
-      <div>
-        <h2 style="margin-bottom:4px;">${nameAr}</h2>
-        <div style="color:#94a3b8;font-size:.85em;">${nameEn}</div>
-      </div>
+      <div><h2 style="margin-bottom:4px;">${nameAr}</h2><div style="color:#94a3b8;font-size:.85em;">${nameEn}</div></div>
     </div>
     <span class="cat-badge" style="background:${catInfo.color}">${catInfo.ar}</span>
     <div class="info-grid">
@@ -1803,15 +1739,12 @@ function openElement3D(z){
       <div class="info-item"><div class="label">الدورة</div><div class="value">${period}</div></div>
       <div class="info-item"><div class="label">البروتونات</div><div class="value">${num}</div></div>
       <div class="info-item"><div class="label">الإلكترونات</div><div class="value">${num}</div></div>
-      <div class="info-item" style="grid-column:1/-1;"><div class="label">التوزيع الإلكتروني (الأغلفة)</div>
+      <div class="info-item" style="grid-column:1/-1;"><div class="label">التوزيع الإلكتروني</div>
         <div class="shells-display">${shells.map((s,i) => `<span class="shell-badge">K${i+1}: ${s}</span>`).join('')}</div>
       </div>
     </div>
   `;
-  
   document.getElementById('modal-3d-overlay').classList.add('active');
-  
-  // Initialize Three.js
   setTimeout(() => createBohrModel(shells, num, catInfo.color), 100);
 }
 
@@ -1835,22 +1768,16 @@ function closeElement3D(){
 function createBohrModel(shells, protons, color){
   const container = document.getElementById('atomic-3d-canvas');
   container.querySelectorAll('canvas').forEach(x => x.remove());
-  
   const W = container.clientWidth;
   const H = container.clientHeight;
-  
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(50, W/H, 0.1, 1000);
   camera.position.set(0, 0, 22);
-  
   const renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
   renderer.setSize(W, H);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   container.insertBefore(renderer.domElement, container.firstChild);
-  
   currentThreeScene = scene;
-  
-  // Lights
   const ambient = new THREE.AmbientLight(0xffffff, 0.6);
   scene.add(ambient);
   const point = new THREE.PointLight(0xffffff, 1, 100);
@@ -1859,87 +1786,46 @@ function createBohrModel(shells, protons, color){
   const point2 = new THREE.PointLight(0x6366f1, 0.8, 100);
   point2.position.set(-10, -10, -10);
   scene.add(point2);
-  
-  // Nucleus - proton cluster
   const nucleusGroup = new THREE.Group();
   const protonColor = 0xef4444;
   const neutronColor = 0x64748b;
   const neutronCount = Math.round(protons * 1.2);
   const totalNucleons = Math.min(protons + neutronCount, 60);
   const clusterRadius = Math.min(0.3 + Math.log(protons + 1) * 0.25, 1.8);
-  
   for(let i=0; i<totalNucleons; i++){
     const isProton = i < protons;
     const geo = new THREE.SphereGeometry(0.28, 16, 16);
-    const mat = new THREE.MeshPhongMaterial({ 
-      color: isProton ? protonColor : neutronColor, 
-      shininess: 100,
-      emissive: isProton ? 0x5a0000 : 0x1e293b,
-      emissiveIntensity: 0.3
-    });
+    const mat = new THREE.MeshPhongMaterial({ color: isProton ? protonColor : neutronColor, shininess: 100, emissive: isProton ? 0x5a0000 : 0x1e293b, emissiveIntensity: 0.3 });
     const sphere = new THREE.Mesh(geo, mat);
     const phi = Math.acos(1 - 2 * (i + 0.5) / totalNucleons);
     const theta = Math.PI * (1 + Math.sqrt(5)) * i;
-    sphere.position.set(
-      clusterRadius * Math.sin(phi) * Math.cos(theta),
-      clusterRadius * Math.sin(phi) * Math.sin(theta),
-      clusterRadius * Math.cos(phi)
-    );
+    sphere.position.set(clusterRadius * Math.sin(phi) * Math.cos(theta), clusterRadius * Math.sin(phi) * Math.sin(theta), clusterRadius * Math.cos(phi));
     nucleusGroup.add(sphere);
   }
-  
-  // Glow around nucleus
   const glowGeo = new THREE.SphereGeometry(clusterRadius + 0.5, 24, 24);
-  const glowMat = new THREE.MeshBasicMaterial({ 
-    color: 0xef4444, transparent: true, opacity: 0.12 
-  });
+  const glowMat = new THREE.MeshBasicMaterial({ color: 0xef4444, transparent: true, opacity: 0.12 });
   nucleusGroup.add(new THREE.Mesh(glowGeo, glowMat));
   scene.add(nucleusGroup);
-  
-  // Electron shells (rings) and electrons
   const electronColor = 0x22d3ee;
   const shellColor = 0x6366f1;
   const allElectrons = [];
-  
   shells.forEach((count, idx) => {
     const radius = 2.5 + idx * 1.5;
-    
-    // Ring (orbit path)
     const ringGeo = new THREE.TorusGeometry(radius, 0.03, 8, 80);
-    const ringMat = new THREE.MeshBasicMaterial({ 
-      color: shellColor, transparent: true, opacity: 0.35 
-    });
+    const ringMat = new THREE.MeshBasicMaterial({ color: shellColor, transparent: true, opacity: 0.35 });
     const ring = new THREE.Mesh(ringGeo, ringMat);
     ring.rotation.x = Math.PI / 2;
-    // Random tilt for 3D feel
     ring.rotation.y = (idx * 0.4) - 0.4;
     ring.rotation.z = (idx * 0.3) - 0.4;
     scene.add(ring);
-    
-    // Electrons
     for(let e=0; e<count; e++){
       const eGeo = new THREE.SphereGeometry(0.16, 12, 12);
-      const eMat = new THREE.MeshPhongMaterial({ 
-        color: electronColor, 
-        emissive: electronColor, 
-        emissiveIntensity: 0.7,
-        shininess: 100
-      });
+      const eMat = new THREE.MeshPhongMaterial({ color: electronColor, emissive: electronColor, emissiveIntensity: 0.7, shininess: 100 });
       const electron = new THREE.Mesh(eGeo, eMat);
       scene.add(electron);
-      allElectrons.push({
-        mesh: electron,
-        radius,
-        angle: (e / count) * Math.PI * 2,
-        speed: 0.015 / (1 + idx * 0.3),
-        tiltX: ring.rotation.x,
-        tiltY: ring.rotation.y,
-        tiltZ: ring.rotation.z
-      });
+      allElectrons.push({ mesh: electron, radius, angle: (e / count) * Math.PI * 2, speed: 0.015 / (1 + idx * 0.3), tiltX: ring.rotation.x, tiltY: ring.rotation.y, tiltZ: ring.rotation.z });
     }
   });
-  
-  // Stars/background
   const starsGeo = new THREE.BufferGeometry();
   const starsCount = 200;
   const starsPos = new Float32Array(starsCount * 3);
@@ -1947,26 +1833,13 @@ function createBohrModel(shells, protons, color){
   starsGeo.setAttribute('position', new THREE.BufferAttribute(starsPos, 3));
   const starsMat = new THREE.PointsMaterial({color:0xffffff, size:0.08, transparent:true, opacity:0.5});
   scene.add(new THREE.Points(starsGeo, starsMat));
-  
-  // Mouse controls
   let isDragging = false, prevX = 0, prevY = 0;
   let rotX = 0, rotY = 0, autoRotate = true;
   let zoom = 0;
-  
   const canvas = renderer.domElement;
   canvas.style.cursor = 'grab';
-  
-  canvas.addEventListener('mousedown', e => {
-    isDragging = true;
-    prevX = e.clientX; prevY = e.clientY;
-    autoRotate = false;
-    canvas.style.cursor = 'grabbing';
-  });
-  window.addEventListener('mouseup', () => {
-    isDragging = false;
-    canvas.style.cursor = 'grab';
-    setTimeout(() => { autoRotate = true; }, 2000);
-  });
+  canvas.addEventListener('mousedown', e => { isDragging = true; prevX = e.clientX; prevY = e.clientY; autoRotate = false; canvas.style.cursor = 'grabbing'; });
+  window.addEventListener('mouseup', () => { isDragging = false; canvas.style.cursor = 'grab'; setTimeout(() => { autoRotate = true; }, 2000); });
   canvas.addEventListener('mousemove', e => {
     if(!isDragging) return;
     const dx = e.clientX - prevX;
@@ -1975,21 +1848,8 @@ function createBohrModel(shells, protons, color){
     rotX += dy * 0.01;
     prevX = e.clientX; prevY = e.clientY;
   });
-  canvas.addEventListener('wheel', e => {
-    e.preventDefault();
-    zoom += e.deltaY * 0.01;
-    zoom = Math.max(-8, Math.min(8, zoom));
-  }, {passive:false});
-  
-  // Touch support
-  canvas.addEventListener('touchstart', e => {
-    if(e.touches.length === 1){
-      isDragging = true;
-      prevX = e.touches[0].clientX;
-      prevY = e.touches[0].clientY;
-      autoRotate = false;
-    }
-  });
+  canvas.addEventListener('wheel', e => { e.preventDefault(); zoom += e.deltaY * 0.01; zoom = Math.max(-8, Math.min(8, zoom)); }, {passive:false});
+  canvas.addEventListener('touchstart', e => { if(e.touches.length === 1){ isDragging = true; prevX = e.touches[0].clientX; prevY = e.touches[0].clientY; autoRotate = false; } });
   canvas.addEventListener('touchmove', e => {
     if(isDragging && e.touches.length === 1){
       const dx = e.touches[0].clientX - prevX;
@@ -2001,42 +1861,27 @@ function createBohrModel(shells, protons, color){
     }
   });
   canvas.addEventListener('touchend', () => { isDragging = false; setTimeout(() => autoRotate = true, 2000); });
-  
-  // Animate
   function animate(){
     currentThreeAnim = requestAnimationFrame(animate);
-    
     if(autoRotate) rotY += 0.003;
     rotX = Math.max(-Math.PI/2, Math.min(Math.PI/2, rotX));
-    
-    // Rotate the whole scene around origin
     scene.rotation.y = rotY;
     scene.rotation.x = rotX;
-    
-    // Update electron positions
     allElectrons.forEach(e => {
       e.angle += e.speed;
       const x = Math.cos(e.angle) * e.radius;
       const z = Math.sin(e.angle) * e.radius;
-      // Apply tilt
       e.mesh.position.set(x, 0, z);
       e.mesh.applyMatrix4(new THREE.Matrix4().makeRotationX(e.tiltX));
       e.mesh.applyMatrix4(new THREE.Matrix4().makeRotationY(e.tiltY));
       e.mesh.applyMatrix4(new THREE.Matrix4().makeRotationZ(e.tiltZ));
     });
-    
-    // Nucleus rotation
     nucleusGroup.rotation.y += 0.008;
     nucleusGroup.rotation.x += 0.005;
-    
-    // Camera zoom
     camera.position.z = 22 + zoom;
-    
     renderer.render(scene, camera);
   }
   animate();
-  
-  // Handle resize
   const ro = new ResizeObserver(() => {
     if(!currentThreeScene) return;
     const nW = container.clientWidth;
@@ -2049,7 +1894,7 @@ function createBohrModel(shells, protons, color){
 }
 
 /* ============================================================
-   🔐 Auth System
+   🔐 Auth
    ============================================================ */
 const USERS_KEY='chemUsers', SESSION_KEY='chemSession', SETTINGS_KEY='chemSettings', RESULTS_KEY='chemResults', NOTIF_KEY='chemNotifs';
 function getUsers(){ try{ return JSON.parse(localStorage.getItem(USERS_KEY)||'[]'); }catch{ return []; } }
@@ -2082,7 +1927,7 @@ function togglePass(id, btn){
   if(inp.type === 'password'){ inp.type = 'text'; btn.innerHTML = '<i class="fas fa-eye-slash"></i>'; }
   else { inp.type = 'password'; btn.innerHTML = '<i class="fas fa-eye"></i>'; }
 }
-function showForgot(e){ e.preventDefault(); showToast('يرجى التواصل مع المشرف لإعادة تعيين كلمة المرور','info'); }
+function showForgot(e){ e.preventDefault(); showToast('يرجى التواصل مع المشرف','info'); }
 
 document.getElementById('login-form').addEventListener('submit', function(e){
   e.preventDefault();
@@ -2202,11 +2047,9 @@ function loadSettingsUI(){
   document.getElementById('default-difficulty').value = s.defaultDifficulty || 'medium';
   document.getElementById('instant-explain').checked = s.instantExplain !== false;
   document.getElementById('timer-duration').value = s.timerDuration || 30;
-  
   document.getElementById('ai-provider').value = s.aiProvider || 'internal';
   document.getElementById('ai-groq-key').value = s.groqKey || '';
   document.getElementById('ai-gemini-key').value = s.geminiKey || '';
-  
   renderThemePicker();
   renderAvatarPicker();
 }
@@ -2389,13 +2232,6 @@ document.getElementById('import-file').addEventListener('change', function(e){
   reader.readAsText(file);
 });
 
-function clearResults(){
-  confirmModal('مسح السجل','هل أنت متأكد من مسح جميع النتائج؟', () => {
-    localStorage.removeItem(RESULTS_KEY);
-    updateProgressUI();
-    showToast('تم مسح السجل','success');
-  });
-}
 function clearAllData(){
   confirmModal('حذف شامل','سيتم حذف جميع البيانات نهائياً!', () => {
     localStorage.clear();
@@ -2475,7 +2311,6 @@ function updateDashboard(){
   let greet = 'صباح الخير';
   if(hour >= 12 && hour < 17) greet = 'مساء الخير';
   else if(hour >= 17) greet = 'مساء الخير';
-  document.getElementById('guest-subtitle') || document.getElementById('welcome-subtitle');
   document.getElementById('welcome-subtitle').textContent = greet + '، لنبدأ رحلة الكيمياء التفاعلية معاً';
 }
 
@@ -2483,60 +2318,60 @@ function updateDashboard(){
    ❓ Questions
    ============================================================ */
 const allQuestions = [
-{q:"العملية التي يعاد فيها ترتيب الذرات لتكوين مواد جديدة تسمى:",o:["التغير الفيزيائي","التفاعل النووي","التفاعل الكيميائي"],c:2,e:"تعريف التفاعل الكيميائي: يعاد ترتيب الذرات لتكوين مواد جديدة",l:"التفاعلات",d:"easy"},
-{q:"المعادلة التي توضح الأيونات المشاركة في التفاعل تسمى:",o:["المعادلة الكيميائية","المعادلة الأيونية","المعادلة الموزونة"],c:1,e:"المعادلة الأيونية تمثل المواد كأيونات",l:"التفاعلات",d:"medium"},
-{q:"أقصى عدد إلكترونات في المستوى الرئيسي الرابع:",o:["18","8","32"],c:2,e:"2n² = 2 × 16 = 32",l:"الترتيب الإلكتروني",d:"medium"},
-{q:"الصيغة الأيونية الصحيحة لكلوريد الصوديوم:",o:["Na²⁺ Cl⁻","Na⁺ Cl⁻","Na²⁺ Cl²⁻"],c:1,e:"Na يفقد إلكترون والكلور يكتسب",l:"التفاعلات",d:"easy"},
+{q:"العملية التي يعاد فيها ترتيب الذرات لتكوين مواد جديدة تسمى:",o:["التغير الفيزيائي","التفاعل النووي","التفاعل الكيميائي"],c:2,e:"تعريف التفاعل الكيميائي",l:"التفاعلات",d:"easy"},
+{q:"المعادلة التي توضح الأيونات المشاركة في التفاعل:",o:["المعادلة الكيميائية","المعادلة الأيونية","المعادلة الموزونة"],c:1,e:"المعادلة الأيونية",l:"التفاعلات",d:"medium"},
+{q:"أقصى عدد إلكترونات في المستوى الرابع:",o:["18","8","32"],c:2,e:"2n² = 32",l:"الترتيب الإلكتروني",d:"medium"},
+{q:"الصيغة الأيونية الصحيحة لكلوريد الصوديوم:",o:["Na²⁺ Cl⁻","Na⁺ Cl⁻","Na²⁺ Cl²⁻"],c:1,e:"Na⁺ Cl⁻",l:"التفاعلات",d:"easy"},
 {q:"الأيون OH⁻ يسمى:",o:["الكربوكسيل","الهيدروكسيد","الكربونات"],c:1,e:"هيدروكسيد",l:"التفاعلات",d:"easy"},
 {q:"التفاعل الذي تكون نواتجه مادة واحدة:",o:["احتراق","إحلال بسيط","تكوين"],c:2,e:"تكوين",l:"التفاعلات",d:"easy"},
-{q:"التوزيع المنتهي بـ 3p⁶ يعني العدد الذري:",o:["10","12","18"],c:2,e:"1s² 2s² 2p⁶ 3s² 3p⁶ = 18",l:"الترتيب الإلكتروني",d:"medium"},
-{q:"الرمز بين المتفاعلات والنواتج:",o:["+","→","(s)"],c:1,e:"السهم",l:"التفاعلات",d:"easy"},
+{q:"التوزيع المنتهي بـ 3p⁶ يعني العدد الذري:",o:["10","12","18"],c:2,e:"18",l:"الترتيب الإلكتروني",d:"medium"},
+{q:"الرمز بين المتفاعلات والنواتج:",o:["+","→","(s)"],c:1,e:"→",l:"التفاعلات",d:"easy"},
 {q:"تفاعل مع الأكسجين ينتج ضوء وحرارة:",o:["تكوين","احتراق","إحلال مزدوج"],c:1,e:"احتراق",l:"التفاعلات",d:"easy"},
-{q:"الصيغة الصحيحة لهيدروكسيد الألومنيوم:",o:["AlOH","Al(OH)₂","Al(OH)₃"],c:2,e:"Al³⁺ يحتاج 3 OH⁻",l:"التفاعلات",d:"medium"},
-{q:"المستويات الثانوية في n=3:",o:["2","3","4"],c:1,e:"s, p, d",l:"الترتيب الإلكتروني",d:"medium"},
-{q:"التوزيع الصحيح للكلور (17):",o:["1s² 2s² 2p⁶ 3s² 3p⁵","1s² 2s² 2p⁶ 3s² 3p⁶","1s² 2s² 2p⁶ 3s¹ 3p⁶"],c:0,e:"مبدأ البناء التصاعدي",l:"الترتيب الإلكتروني",d:"hard"},
-{q:"المستويات الثانوية في n=5:",o:["s,p","s,p,d","s,p,d,f"],c:2,e:"5 مستويات لكن المستخدمة 4",l:"الترتيب الإلكتروني",d:"hard"},
-{q:"ليس من أدلة حدوث التفاعل الكيميائي:",o:["تصاعد غاز","تغير اللون","تغير الشكل"],c:2,e:"تغير الشكل تغير فيزيائي",l:"التفاعلات",d:"easy"},
+{q:"الصيغة الصحيحة لهيدروكسيد الألومنيوم:",o:["AlOH","Al(OH)₂","Al(OH)₃"],c:2,e:"Al(OH)₃",l:"التفاعلات",d:"medium"},
+{q:"المستويات الثانوية في n=3:",o:["2","3","4"],c:1,e:"s,p,d",l:"الترتيب الإلكتروني",d:"medium"},
+{q:"التوزيع الصحيح للكلور (17):",o:["1s² 2s² 2p⁶ 3s² 3p⁵","1s² 2s² 2p⁶ 3s² 3p⁶","1s² 2s² 2p⁶ 3s¹ 3p⁶"],c:0,e:"3s² 3p⁵",l:"الترتيب الإلكتروني",d:"hard"},
+{q:"المستويات الثانوية في n=5:",o:["s,p","s,p,d","s,p,d,f"],c:2,e:"s,p,d,f",l:"الترتيب الإلكتروني",d:"hard"},
+{q:"ليس من أدلة حدوث التفاعل الكيميائي:",o:["تصاعد غاز","تغير اللون","تغير الشكل"],c:2,e:"تغير الشكل",l:"التفاعلات",d:"easy"},
 {q:"معامل H₂ في N₂ + 3H₂ → 2NH₃:",o:["1","2","3"],c:2,e:"3",l:"التفاعلات",d:"medium"},
-{q:"عدد أكسدة الأكسجين عادة:",o:["+1","-1","-2"],c:2,e:"-2 في الأكاسيد",l:"التفاعلات",d:"medium"},
-{q:"توزيع البورون (5):",o:["1s² 2s³","1s² 2s² 2p¹","1s² 2p³"],c:1,e:"1s² 2s² 2p¹",l:"الترتيب الإلكتروني",d:"medium"},
-{q:"ناتج Mg²⁺ + NO₃⁻:",o:["MgNO₃","Mg(NO₃)₂","Mg₂NO₃"],c:1,e:"2+ مع 1-",l:"التفاعلات",d:"medium"},
+{q:"عدد أكسدة الأكسجين عادة:",o:["+1","-1","-2"],c:2,e:"-2",l:"التفاعلات",d:"medium"},
+{q:"توزيع البورون (5):",o:["1s² 2s³","1s² 2s² 2p¹","1s² 2p³"],c:1,e:"2p¹",l:"الترتيب الإلكتروني",d:"medium"},
+{q:"ناتج Mg²⁺ + NO₃⁻:",o:["MgNO₃","Mg(NO₃)₂","Mg₂NO₃"],c:1,e:"Mg(NO₃)₂",l:"التفاعلات",d:"medium"},
 {q:"صيغة أكسيد الحديد الثنائي:",o:["FeO₂","Fe₂O","FeO"],c:2,e:"FeO",l:"التفاعلات",d:"medium"},
-{q:"المعادلة الأيونية الكاملة AgNO₃ + KI:",o:["Ag⁺+NO₃⁻+K⁺+I⁻ → AgI+K⁺+NO₃⁻","Ag⁺+I⁻ → AgI","AgNO₃+KI → AgI+KNO₃"],c:0,e:"كل الذائب يتفكك",l:"التفاعلات",d:"hard"},
-{q:"المعادلة الأيونية النهائية:",o:["Ag⁺+NO₃⁻+K⁺+I⁻ → AgI+K⁺+NO₃⁻","Ag⁺+I⁻ → AgI","K⁺+NO₃⁻ → KNO₃"],c:1,e:"حذف المتفرجة",l:"التفاعلات",d:"hard"},
-{q:"قانون حفظ الكتلة:",o:["كتلة المتفاعلة = كتلة الناتجة","فقدان كتلة","زيادة كتلة"],c:0,e:"المادة لا تفنى",l:"التفاعلات",d:"easy"},
+{q:"المعادلة الأيونية الكاملة AgNO₃ + KI:",o:["Ag⁺+NO₃⁻+K⁺+I⁻ → AgI+K⁺+NO₃⁻","Ag⁺+I⁻ → AgI","AgNO₃+KI → AgI+KNO₃"],c:0,e:"كاملة",l:"التفاعلات",d:"hard"},
+{q:"المعادلة الأيونية النهائية:",o:["Ag⁺+NO₃⁻+K⁺+I⁻ → AgI+K⁺+NO₃⁻","Ag⁺+I⁻ → AgI","K⁺+NO₃⁻ → KNO₃"],c:1,e:"Ag⁺+I⁻",l:"التفاعلات",d:"hard"},
+{q:"قانون حفظ الكتلة:",o:["كتلة المتفاعلة = كتلة الناتجة","فقدان كتلة","زيادة كتلة"],c:0,e:"حفظ الكتلة",l:"التفاعلات",d:"easy"},
 {q:"الغرض من المعاملات:",o:["تساوي عدد الذرات","سهولة القراءة","السرعة"],c:0,e:"حفظ الكتلة",l:"التفاعلات",d:"easy"},
 {q:"احتراق CH₄ مع O₂:",o:["تكوين","إحلال بسيط","احتراق"],c:2,e:"احتراق",l:"التفاعلات",d:"medium"},
 {q:"لماذا يحل Mg محل H في HCl?",o:["أكثر لمعاناً","أكثر نشاطاً","أرخص"],c:1,e:"سلسلة النشاط",l:"التفاعلات",d:"medium"},
-{q:"إحلال مزدوج:",o:["Na+Cl₂","Zn+2HCl","AgNO₃+NaCl"],c:2,e:"تبادل أيونات",l:"التفاعلات",d:"medium"},
-{q:"الخطأ في H₂+O₂=H₂O:",o:["الصيغ","غير موزونة","السهم"],c:1,e:"عدد الأكسجين",l:"التفاعلات",d:"easy"},
+{q:"إحلال مزدوج:",o:["Na+Cl₂","Zn+2HCl","AgNO₃+NaCl"],c:2,e:"تبادل",l:"التفاعلات",d:"medium"},
+{q:"الخطأ في H₂+O₂=H₂O:",o:["الصيغ","غير موزونة","السهم"],c:1,e:"غير موزونة",l:"التفاعلات",d:"easy"},
 {q:"(s) تعني:",o:["محلول","غاز","صلب"],c:2,e:"Solid",l:"التفاعلات",d:"easy"},
 {q:"تغير كيميائي:",o:["ذوبان السكر","صدأ الحديد","تجمّد الماء"],c:1,e:"صدأ",l:"التفاعلات",d:"easy"},
-{q:"النسبة H₂:O₂ في 2H₂+O₂→2H₂O:",o:["1:1","2:1","1:2"],c:1,e:"2:1",l:"التفاعلات",d:"medium"},
+{q:"النسبة H₂:O₂:",o:["1:1","2:1","1:2"],c:1,e:"2:1",l:"التفاعلات",d:"medium"},
 {q:"صيغة كبريتات الألومنيوم:",o:["AlSO₄","Al₂(SO₄)₃","Al₃(SO₄)₂"],c:1,e:"Al₂(SO₄)₃",l:"التفاعلات",d:"hard"},
 {q:"4غ H + 32غ O = ؟ ماء:",o:["28غ","32غ","36غ"],c:2,e:"36غ",l:"التفاعلات",d:"medium"},
 {q:"المعادلة الصحيحة لاحتراق Mg:",o:["Mg+O→MgO","Mg+O₂→2MgO","2Mg+O₂→2MgO"],c:2,e:"2Mg+O₂→2MgO",l:"التفاعلات",d:"medium"},
-{q:"هل تغير حالة المادة تفاعل كيميائي؟",o:["صحيحة","خاطئة","غير دقيقة"],c:2,e:"قد يكون فيزيائي",l:"التفاعلات",d:"easy"},
+{q:"هل تغير حالة المادة تفاعل كيميائي؟",o:["صحيحة","خاطئة","غير دقيقة"],c:2,e:"غير دقيقة",l:"التفاعلات",d:"easy"},
 {q:"(g) تعني:",o:["صلب","سائل","غاز"],c:2,e:"Gas",l:"التفاعلات",d:"easy"},
-{q:"لماذا لا يحل Cu محل Fe?",o:["أقل لمعاناً","أقل نشاطاً","أرخص"],c:1,e:"سلسلة النشاط",l:"التفاعلات",d:"medium"},
-{q:"عدد ذرات O في Al₂(SO₄)₃:",o:["4","7","12"],c:2,e:"3×4=12",l:"التفاعلات",d:"hard"},
-{q:"إحلال مزدوج:",o:["CaCO₃→CaO+CO₂","Zn+2HCl","AgNO₃+NaCl"],c:2,e:"تبادل أيونات",l:"التفاعلات",d:"medium"},
+{q:"لماذا لا يحل Cu محل Fe?",o:["أقل لمعاناً","أقل نشاطاً","أرخص"],c:1,e:"أقل نشاطاً",l:"التفاعلات",d:"medium"},
+{q:"عدد ذرات O في Al₂(SO₄)₃:",o:["4","7","12"],c:2,e:"12",l:"التفاعلات",d:"hard"},
+{q:"إحلال مزدوج:",o:["CaCO₃→CaO+CO₂","Zn+2HCl","AgNO₃+NaCl"],c:2,e:"تبادل",l:"التفاعلات",d:"medium"},
 {q:"المعادلة الموزونة HCl+NaOH:",o:["HCl+NaOH→NaCl+H₂O","2HCl+NaOH","HCl+2NaOH"],c:0,e:"موزونة",l:"التفاعلات",d:"medium"},
-{q:"سبب السهم:",o:["اتجاه التفاعل","السرعة","التمييز"],c:0,e:"ينتج",l:"التفاعلات",d:"easy"},
-{q:"عدد e المفقودة من Mg (12):",o:["واحد","اثنان","ثلاثة"],c:1,e:"3s²",l:"الترتيب الإلكتروني",d:"medium"},
-{q:"أيون بتوزيع 1s²2s²2p⁶:",o:["Na⁺","F⁻","O²⁻","جميعها"],c:3,e:"كلها 10 e",l:"الترتيب الإلكتروني",d:"hard"},
+{q:"سبب السهم:",o:["اتجاه التفاعل","السرعة","التمييز"],c:0,e:"اتجاه",l:"التفاعلات",d:"easy"},
+{q:"عدد e المفقودة من Mg (12):",o:["واحد","اثنان","ثلاثة"],c:1,e:"اثنان",l:"الترتيب الإلكتروني",d:"medium"},
+{q:"أيون بتوزيع 1s²2s²2p⁶:",o:["Na⁺","F⁻","O²⁻","جميعها"],c:3,e:"جميعها",l:"الترتيب الإلكتروني",d:"hard"},
 {q:"المعادلة اللفظية AgNO₃+NaCl:",o:["كلوريد الفضة راسب + نترات الصوديوم","نترات الصوديوم + كلوريد الفضة","كلاهما"],c:2,e:"كلاهما صحيح",l:"التفاعلات",d:"easy"},
 {q:"دليل على تفاعل كيميائي:",o:["ذوبان السكر","تغير لون عباد الشمس","تكوين راسب"],c:2,e:"راسب",l:"التفاعلات",d:"medium"},
-{q:"الغرض من وزن المعادلات:",o:["القراءة","حفظ الكتلة","السرعة"],c:1,e:"قانون حفظ الكتلة",l:"التفاعلات",d:"easy"},
+{q:"الغرض من وزن المعادلات:",o:["القراءة","حفظ الكتلة","السرعة"],c:1,e:"حفظ الكتلة",l:"التفاعلات",d:"easy"},
 {q:"معامل N في 4NH₃+5O₂→4NO+6H₂O:",o:["4","5","1"],c:2,e:"معامل ضمني",l:"التفاعلات",d:"hard"},
-{q:"لماذا نكتب الحالة؟",o:["اللون","للمعادلة الأيونية","الصيغة"],c:1,e:"تفكك",l:"التفاعلات",d:"medium"},
+{q:"لماذا نكتب الحالة؟",o:["اللون","للمعادلة الأيونية","الصيغة"],c:1,e:"للمعادلة الأيونية",l:"التفاعلات",d:"medium"},
 {q:"Ca + H₂O:",o:["Ca+H₂O→Ca(OH)₂+H₂","Ca+2H₂O→Ca(OH)₂+H₂","2Ca+2H₂O"],c:1,e:"موزونة",l:"التفاعلات",d:"medium"},
 {q:"H₂+Cl₂→2HCl موزونة؟",o:["نعم","لا","خطأ"],c:0,e:"نعم",l:"التفاعلات",d:"easy"},
-{q:"Na+Cl₂ الموزونة:",o:["Na+Cl→NaCl","2Na+Cl₂→2NaCl","2Na+2Cl→2NaCl"],c:1,e:"Cl₂ ثنائي",l:"التفاعلات",d:"medium"}
+{q:"Na+Cl₂ الموزونة:",o:["Na+Cl→NaCl","2Na+Cl₂→2NaCl","2Na+2Cl→2NaCl"],c:1,e:"2Na+Cl₂",l:"التفاعلات",d:"medium"}
 ];
 
 /* ============================================================
-   🎮 Quiz Logic
+   🎮 Quiz
    ============================================================ */
 let currentQuestions=[], currentQuestion=0, score=0, userAnswers=[], weakLessons={};
 let quizMode='practice', quizTime=1800, timerInterval;
@@ -2723,27 +2558,6 @@ function saveResults(){
   localStorage.setItem(RESULTS_KEY, JSON.stringify(arr));
 }
 
-function updateProgressUI(){
-  const arr = JSON.parse(localStorage.getItem(RESULTS_KEY) || '[]');
-  if(arr.length){
-    const total = arr.reduce((s,r) => s + r.score, 0);
-    const avg = Math.round(total/arr.length);
-    const best = Math.max(...arr.map(r => r.score));
-    document.getElementById('average-score').textContent = avg + '%';
-    document.getElementById('best-score').textContent = best + '%';
-    document.getElementById('total-quizzes').textContent = arr.length;
-    document.getElementById('total-time').textContent = (arr.length * 30) + ' د';
-  }
-  const tb = document.getElementById('quiz-history');
-  tb.innerHTML = '';
-  arr.forEach(r => {
-    const cls = r.score >= 70 ? 'score-high' : r.score >= 50 ? 'score-medium' : 'score-low';
-    const row = document.createElement('tr');
-    row.innerHTML = `<td>${r.date} - ${r.time}</td><td>${r.mode === 'practice' ? 'تدريب' : 'امتحان'}</td><td><span class="score-badge ${cls}">${r.score}%</span></td><td>--:--</td><td>${r.total}</td>`;
-    tb.appendChild(row);
-  });
-}
-
 function updateProfileUI(){
   const user = currentUser();
   if(!user) return;
@@ -2873,7 +2687,7 @@ function calcPH(){
   else { pOH = v; oh = Math.pow(10, -pOH); pH = 14 - pOH; h = Math.pow(10, -pH); }
   const nature = pH < 7 ? 'حمضي 🔴' : pH > 7 ? 'قاعدي 🔵' : 'متعادل ⚪';
   document.getElementById('ph-value-out').textContent = 'pH = ' + pH.toFixed(3);
-  document.getElementById('ph-detail').innerHTML = `pOH = ${pOH.toFixed(3)}<br>[H⁺] = ${h.toExponential(3)} M<br>[OH⁻] = ${oh.toExponential(3)} M<br>المحلول: ${nature}`;
+  document.getElementById('ph-detail').innerHTML = `pOH = ${pOH.toFixed(3)}<br>[H⁺] = ${h.toExponential(3)} M<br>[OH⁻] = ${oh.toExponential(3)} M<br>${nature}`;
   document.getElementById('ph-result').classList.add('show');
 }
 
@@ -2922,17 +2736,11 @@ function calcBalance(){
   if(parts.length !== 2){ showToast('صيغة المعادلة غير صحيحة','error'); return; }
   const react = parts[0].split('+').map(s => s.trim()).filter(s => s);
   const prod = parts[1].split('+').map(s => s.trim()).filter(s => s);
-  
-  // Parse all formulas to get atom counts per molecule
   const reactAtoms = react.map(parseFormula);
   const prodAtoms = prod.map(parseFormula);
-  
-  // Collect all unique elements
   const allEls = new Set();
   [...reactAtoms, ...prodAtoms].forEach(m => Object.keys(m).forEach(e => allEls.add(e)));
   const elList = [...allEls];
-  
-  // Setup matrix: rows = elements, cols = [reactCoeffs, -prodCoeffs]
   const nR = react.length, nP = prod.length, nC = nR + nP;
   const matrix = elList.map(el => {
     const row = [];
@@ -2940,14 +2748,11 @@ function calcBalance(){
     prodAtoms.forEach(m => row.push(-(m[el] || 0)));
     return row;
   });
-  
-  // Try to find integer solution via brute force (limited range)
   let solution = null;
   const max = 12;
   function search(coeffs, idx){
     if(solution) return;
     if(idx === nC){
-      // Check if all equations satisfy
       for(let i = 0; i < matrix.length; i++){
         let sum = 0;
         for(let j = 0; j < nC; j++) sum += matrix[i][j] * coeffs[j];
@@ -2964,24 +2769,20 @@ function calcBalance(){
     }
   }
   search([], 0);
-  
   if(solution){
-    // GCD normalize
     const gcd = (a,b) => b === 0 ? a : gcd(b, a % b);
     let g = solution.reduce((a,b) => gcd(a,b));
     if(g > 1) solution = solution.map(c => c / g);
-    
     const reactStr = react.map((s, i) => (solution[i] > 1 ? solution[i] : '') + s).join(' + ');
     const prodStr = prod.map((s, i) => {
       const c = solution[nR + i];
       return (c > 1 ? c : '') + s;
     }).join(' + ');
-    
     document.getElementById('balance-value').textContent = reactStr + ' → ' + prodStr;
-    document.getElementById('balance-detail').innerHTML = '✅ المعادلة موزونة بشكل صحيح<br>القانون: عدد ذرات كل عنصر متساوٍ في الطرفين';
+    document.getElementById('balance-detail').innerHTML = '✅ المعادلة موزونة';
   } else {
     document.getElementById('balance-value').textContent = 'لم يتم العثور على حل';
-    document.getElementById('balance-detail').innerHTML = 'تأكد من صحة الصيغ أو جرب نطاق أوسع';
+    document.getElementById('balance-detail').innerHTML = 'تأكد من صحة الصيغ';
   }
   document.getElementById('balance-result').classList.add('show');
 }
@@ -2993,8 +2794,8 @@ function calcConc(){
   if(isNaN(m) || isNaN(mw) || isNaN(v)){ showToast('أدخل جميع القيم','error'); return; }
   const moles = m / mw;
   const conc = moles / v;
-  document.getElementById('conc-value').textContent = conc.toFixed(4) + ' M (mol/L)';
-  document.getElementById('conc-detail').innerHTML = `المولات: n = m/M = ${m}/${mw} = ${moles.toFixed(4)} mol<br>التركيز: M = n/V = ${moles.toFixed(4)}/${v} = ${conc.toFixed(4)} M`;
+  document.getElementById('conc-value').textContent = conc.toFixed(4) + ' M';
+  document.getElementById('conc-detail').innerHTML = `n = ${moles.toFixed(4)} mol<br>M = n/V = ${conc.toFixed(4)} M`;
   document.getElementById('conc-result').classList.add('show');
 }
 
@@ -3008,7 +2809,7 @@ function calcConvert(){
   if(type === 'g'){ g = v; mol = g / mw; at = mol * NA; }
   else if(type === 'mol'){ mol = v; g = mol * mw; at = mol * NA; }
   else { at = v; mol = at / NA; g = mol * mw; }
-  document.getElementById('convert-value').textContent = `${g.toFixed(4)} g | ${mol.toFixed(6)} mol | ${at.toExponential(3)} جزيء`;
+  document.getElementById('convert-value').textContent = `${g.toFixed(4)} g | ${mol.toFixed(6)} mol | ${at.toExponential(3)}`;
   document.getElementById('convert-detail').innerHTML = `الكتلة المولية: ${mw} g/mol`;
   document.getElementById('convert-result').classList.add('show');
 }
@@ -3045,13 +2846,13 @@ function calcEnergy(){
     const dt = parseFloat(document.getElementById('e-dt').value);
     const q = m * c * dt;
     result = q.toFixed(2) + ' J';
-    detail = `q = m × c × ΔT = ${m} × ${c} × ${dt} = ${q.toFixed(2)} J<br>= ${(q/1000).toFixed(4)} kJ`;
+    detail = `q = m × c × ΔT = ${q.toFixed(2)} J = ${(q/1000).toFixed(4)} kJ`;
   } else if(type === 'mass'){
     const m = parseFloat(document.getElementById('e-mass').value);
     const c = 3e8;
     const E = m * c * c;
     result = E.toExponential(4) + ' J';
-    detail = `E = mc² = ${m} × (3×10⁸)² = ${E.toExponential(4)} J<br>= ${(E/1e9).toExponential(4)} GJ`;
+    detail = `E = mc² = ${E.toExponential(4)} J`;
   } else {
     const h = 6.626e-34;
     let f = parseFloat(document.getElementById('e-f').value);
@@ -3059,7 +2860,7 @@ function calcEnergy(){
     if(!isNaN(lambda) && lambda > 0) f = 3e8 / (lambda * 1e-9);
     const E = h * f;
     result = E.toExponential(4) + ' J';
-    detail = `E = hf = ${h.toExponential(3)} × ${f.toExponential(3)} = ${E.toExponential(4)} J`;
+    detail = `E = hf = ${E.toExponential(4)} J`;
   }
   document.getElementById('energy-value').textContent = result;
   document.getElementById('energy-detail').innerHTML = detail;
@@ -3067,55 +2868,37 @@ function calcEnergy(){
 }
 
 /* ============================================================
-   🤖 AI Assistant
+   🤖 AI Assistant (Updated for 2026 models)
    ============================================================ */
 const KNOWLEDGE = [
-  {k:['ذرة','الذرة','تركيب الذرة','مكونات الذرة'],a:'🔬 الذرة هي أصغر وحدة بنائية للمادة تحتفظ بخصائص العنصر. تتكون من:\n\n• النواة: تحتوي على بروتونات (شحنة +) ونيوترونات (متعادلة)\n• الإلكترونات: تدور حول النواة في مدارات (شحنة -)\n\nعدد البروتونات = العدد الذري.\nالكتلة الذرية = عدد البروتونات + النيوترونات.'},
-  {k:['جدول دوري','الجدول الدوري','عناصر'],a:'📊 الجدول الدوري هو تنظيم للعناصر الكيميائية:\n\n• 118 عنصراً معروفاً\n• مرتبة حسب العدد الذري تصاعدياً\n• 7 دورات (صفوف) و18 مجموعة (أعمدة)\n• العناصر في العمود نفسه لها خصائص متشابهة\n\nيمكنك تصفح الجدول الدوري التفاعلي مع النماذج ثلاثية الأبعاد في قسم "الجدول الدوري".'},
-  {k:['رابطة','روابط','الرابطة الكيميائية','الروابط'],a:'🔗 الروابط الكيميائية أنواعها:\n\n1. رابطة أيونية: انتقال إلكترون من فلز إلى لافلز (مثل NaCl)\n2. رابطة تساهمية: مشاركة إلكترونات (مثل H₂O، CO₂)\n3. رابطة فلزية: بين ذرات الفلزات\n4. روابط هيدروجينية: ضعيفة بين جزيئات قطبية'},
-  {k:['تفاعل','التفاعل','التفاعلات','معادلة'],a:'⚗️ التفاعل الكيميائي: عملية إعادة ترتيب الذرات لتكوين مواد جديدة.\n\nالأنواع:\n• تفاعل تكوين (A + B → AB)\n• تفاعل تفكك (AB → A + B)\n• إحلال بسيط (A + BC → AC + B)\n• إحلال مزدوج (AB + CD → AD + CB)\n• احتراق (مادة + O₂ → CO₂ + H₂O)\n\nقانون حفظ الكتلة: كتلة المتفاعلات = كتلة النواتج.'},
-  {k:['حمض','أحماض','قاعدة','قواعد','الأحماض والقواعد'],a:'🧪 الأحماض والقواعد:\n\n• الأحماض: تُعطي بروتونات (H⁺)، مثل HCl، H₂SO₄، HNO₃\n• القواعد: تستقبل بروتونات أو تُعطي OH⁻، مثل NaOH، KOH\n\nنظرية أرهينيوس: الحمض يعطي H⁺، القاعدة تعطي OH⁻.\nنظرية برونستد-لوري: الحمض مانح للبروتون، القاعدة مستقبلة.\n\nالتفاعل: حمض + قاعدة → ملح + ماء (تعادل)'},
-  {k:['ph','Ph','pH','حموضة'],a:'📏 مقياس pH:\n\n• pH = -log[H⁺]\n• يتراوح من 0 إلى 14\n• pH < 7 → حمضي\n• pH = 7 → متعادل (الماء النقي)\n• pH > 7 → قاعدي\n\npOH = 14 - pH\n\nمثال: [H⁺] = 0.001 M → pH = 3\n\nيمكنك استخدام الآلة الحاسبة الكيميائية لحساب pH.'},
-  {k:['مول','المول','افوجادرو','أفوجادرو'],a:'⚖️ المول:\n\n• وحدة قياس كمية المادة\n• 1 مول = 6.022 × 10²³ جزيء (عدد أفوجادرو)\n• 1 مول من أي مادة = كتلتها المولية بالجرام\n\nالمعادلات:\n• n (مول) = الكتلة (g) ÷ الكتلة المولية (g/mol)\n• عدد الجزيئات = n × 6.022 × 10²³\n\nمثال: 18g من H₂O = 1 مول = 6.022 × 10²³ جزيء'},
-  {k:['مولارية','مولارية','تركيز','التركيز'],a:'💧 التركيز المولاري (M):\n\nM = عدد المولات ÷ الحجم باللتر\nM = (الكتلة ÷ الكتلة المولية) ÷ الحجم\n\nمثال: 5.85g NaCl في 1L ماء:\nM = (5.85/58.5) ÷ 1 = 0.1 M'},
-  {k:['كيمياء عضوية','العضوية','مركبات عضوية'],a:'⚛️ الكيمياء العضوية: دراسة مركبات الكربون.\n\nالمجموعات الوظيفية المهمة:\n• -OH (كحول)\n• -COOH (حمض كربوكسيلي)\n• -CHO (ألدهيد)\n• -CO- (كيتون)\n• -NH₂ (أمين)\n\nأهم المركبات: الهيدروكربونات (ألكانات، ألكينات، ألكاينات)، الكحولات، الأحماض الدهنية، الأحماض الأمينية.'},
-  {k:['هيدروكربون','هيدروكربونات','ألكان','ألكين','ألكاين'],a:'🔥 الهيدروكربونات:\n\n• ألكانات: روابط أحادية (CnH2n+2) - مثل CH₄ (ميثان)\n• ألكينات: رابطة مزدوجة (CnH2n) - مثل C₂H₄ (إيثيلين)\n• ألكاينات: رابطة ثلاثية (CnH2n-2) - مثل C₂H₂ (أسيتيلين)\n\nالاحتراق: CxHy + O₂ → CO₂ + H₂O'},
-  {k:['ماء','h2o','H2O','الماء'],a:'💧 الماء (H₂O):\n\n• جزيء قطبي\n• زاوية الرابطة: 104.5°\n• الكتلة المولية: 18.015 g/mol\n• الرابطة هيدروجينية تمنحه خصائص فريدة\n• مذيب عالمي\n• درجة الغليان: 100°C، التجمد: 0°C'},
-  {k:['كربون','الكربون'],a:'⚫ الكربون (C):\n\n• العدد الذري: 6\n• عنصر أساسي في الكيمياء العضوية\n• صوره (Allotropes): الجرافيت، الألماس، الفوليرين، الجرافين\n• يشكل 4 روابط تساهمية\n• أساس الحياة'},
-  {k:['أكسجين','الأكسجين','o2','O2'],a:'🌬️ الأكسجين (O₂):\n\n• العدد الذري: 8\n• ضروري للتنفس الخلوي\n• يشكل 21% من الغلاف الجوي\n• الأكسدة: احتراق المواد مع O₂\n• الصيغة: O₂ (ثنائي الذرة)'},
-  {k:['حديد','الحديد','fe','Fe'],a:'🔴 الحديد (Fe):\n\n• العدد الذري: 26\n• فلز انتقالي\n• يدخل في تركيب الهيموغلوبين\n• يوجد بحالتين: Fe²⁺ و Fe³⁺\n• يدخل في السيتوكرومات لسلاسل نقل الإلكترون\n• خطر التأكسد: تفاعل فنتون\n\nاقرأ التفاصيل الكاملة في قسم "الكيمياء والانسان".'},
-  {k:['قانون','قوانين','الغازات','غاز مثالي'],a:'🌡️ قوانين الغازات:\n\n• قانون بويل: P₁V₁ = P₂V₂ (T ثابتة)\n• قانون شارل: V₁/T₁ = V₂/T₂ (P ثابت)\n• قانون جاي-لوساك: P₁/T₁ = P₂/T₂ (V ثابت)\n• القانون المثالي: PV = nRT\n  R = 0.0821 L·atm/(mol·K)\n\nاستخدم الآلة الحاسبة لحساب ذلك.'},
-  {k:['أكسدة','اختزال','redox','أكسدة واختزال'],a:'⚡ الأكسدة والاختزال:\n\n• الأكسدة: فقدان إلكترونات (زيادة عدد الأكسدة)\n• الاختزال: اكتساب إلكترونات (نقصان عدد الأكسدة)\n\nمثال: 2Mg + O₂ → 2MgO\nMg: 0 → +2 (تأكسد)\nO: 0 → -2 (اختزال)\n\n"الفلز يفقد، واللافلز يكتسب"' },
-  {k:['دوري','دورات','الجدول'],a:'📊 الجدول الدوري مرتب في 7 دورات (صفوف) و18 مجموعة (أعمدة). كل دورة تمثل مستوى طاقة رئيسي.'},
-  {k:['كيمياء حيوية','bio','bioinorganic'],a:'🧬 الكيمياء الحيوية: دراسة التفاعلات الكيميائية في الكائنات الحية.\n\nمواضيع رئيسية:\n• العناصر الحيوية (Fe, Zn, Mg, I, Se, Cu, Mn)\n• الإنزيمات والتحفيز\n• الأيض (Metabolism)\n• DNA و RNA\n• البروتينات والكربوهيدرات والدهون\n\nاقرأ البحث الشامل في قسم "الكيمياء والانسان".'},
-  {k:['انزيم','إنزيم','انزيمات','إنزيمات'],a:'🔬 الإنزيمات: بروتينات تسرّع التفاعلات الكيميائية (محفزات حيوية).\n\n• تعمل بخفض طاقة التنشيط\n• متخصصة (لكل إنزيم ركيزة)\n• لا تُستهلك في التفاعل\n• تتأثر بـ: الحرارة، pH، التركيز\n\nمثال: الأميليز يحلل النشا'},
-  {k:['dna','DNA','الحمض النووي'],a:'🧬 DNA (الحمض النووي الريبوزي منقوص الأكسجين):\n\n• يحمل المعلومات الوراثية\n• سلسلة مزدوجة (Double Helix)\n• القواعد: A-T، G-C\n• السكر: ديوكسي ريبوز\n• الفوسفات: جسر بين النيوكليوتيدات'},
-  {k:['حسابات','حساب','stochiometry'],a:'🧮 الحسابات الكيميائية:\n\n• n (مول) = m (كتلة) / M (كتلة مولية)\n• Molarity = n / V (L)\n• عدد الجزيئات = n × 6.022×10²³\n• الحجم المولي (STP) = 22.4 L/mol\n• نسبة المولات = معاملات المعادلة\n\nجرب الآلة الحاسبة الكيميائية!'},
-  {k:['اتزان','توازن','اتزان كيميائي'],a:'⚖️ الاتزان الكيميائي:\n\nعندما يكون معدل التفاعل الأمامي = معدل التفاعل العكسي.\n\nثابت الاتزان Keq = [المنتجات]^معاملات / [المتفاعلات]^معاملات\n\nمبدأ لوشاتلييه: إذا أثّر تغيير على نظام في اتزان، يستجيب النظام لتقليل التأثير.'},
-  {k:['حرارة','حرارية','ثرموديناميكا','ديناميكا حرارية'],a:'🔥 الكيمياء الحرارية:\n\n• التفاعل الطارد: يُطلق حرارة (ΔH < 0)\n• التفاعل الماص: يمتص حرارة (ΔH > 0)\n\nقانون هس: ΔH للتفاعل الكلي = مجموع ΔH للخطوات.\n\nq = m × c × ΔT'},
-  {k:['كيمياء كهربائية','كهربائية','خلايا'],a:'⚡ الكيمياء الكهربائية:\n\n• خلية جلفانية: تحول كيميائي إلى كهربائي\n• خلية إلكتروليتية: كهربائي إلى كيميائي\n\n• الأنود: أكسدة (-)\n• الكاثود: اختزال (+)'},
-  {k:['نظائر','نظير','isotope'],a:'⚛️ النظائر: ذرات للعنصر نفسه تختلف في عدد النيوترونات.\n\nمثال: الكربون-12، الكربون-13، الكربون-14\n\n• نفس العدد الذري\n• كتلة مختلفة\n• خصائص كيميائية متشابهة'},
-  {k:['ايون','أيون','أيونات'],a:'⚡ الأيون: ذرة فقدت أو اكتسبت إلكترونات.\n\n• كاتيون: موجب (فقد إلكترونات) — مثل Na⁺\n• أنيون: سالب (اكتسب إلكترونات) — مثل Cl⁻\n\nالفلزات تُكوّن كاتيونات، اللافلزات تُكوّن أنيونات.'},
-  {k:['نشاط','سلسلة النشاط'],a:'📊 سلسلة النشاط الكيميائي (ترتيب تنازلي):\n\nK > Na > Ca > Mg > Al > Zn > Fe > Pb > H > Cu > Ag > Au\n\nالفلز الأعلى يحل محل الأسفل في مركباته.'},
-  {k:['الكيمياء والانسان','بحث'],a:'📖 لديك بحث كامل في قسم "الكيمياء والانسان" يغطي 5 عناصر مهمة:\n\n1. الحديد (Fe) - نقل الأكسجين\n2. الزنك (Zn) - التثبيت البنيوي\n3. المغنيسيوم (Mg) - نقل الطاقة\n4. اليود (I) - الهرمونات الدرقية\n5. السيلينيوم (Se) - مضاد الأكسدة\n\nكل عنصر له نموذج بور 3D تفاعلي!'},
-  {k:['قانون حفظ الكتلة','حفظ الكتلة'],a:'⚖️ قانون حفظ الكتلة:\n\n"المادة لا تفنى ولا تستحدث من العدم في التفاعلات الكيميائية."\n\nلذلك: مجموع كتل المتفاعلات = مجموع كتل النواتج\n\nلذلك يجب وزن المعادلات الكيميائية.'},
-  {k:['ورق عباد الشمس','كاشف','كواشف'],a:'🧪 الكواشف:\n\n• عباد الشمس: أحمر في الحمض، أزرق في القاعدة\n• الفينولفثالين: عديم اللون في الحمض، وردي في القاعدة\n• الميثيل البرتقالي: أحمر في الحمض، أصفر في القاعدة'},
-  {k:['عنصر','عناصر','العنصر'],a:'⚛️ العنصر: مادة تتكون من ذرات لها نفس العدد الذري.\n\n• 118 عنصراً معروفاً\n• 94 منها طبيعية\n• الباقي مُصنّعة\n\nاقرأ المزيد في قسم "الجدول الدوري".'},
-  {k:['كيمياء','الكيمياء'],a:'🧪 الكيمياء: علم يدرس المادة وتفاعلاتها وخصائصها.\n\nفروعها:\n• عضوية، غير عضوية\n• تحليلية، فيزيائية\n• حيوية، نووية\n\nأنا هنا للإجابة على أسئلتك! اسأل عن أي موضوع.'},
-  {k:['سلام','مرحبا','هاي','اهلا','hi','hello'],a:'👋 أهلاً وسهلاً! أنا كيميائي AI، مساعدك الذكي في الكيمياء. اسألني عن:\n\n• الذرة والجدول الدوري\n• الروابط والتفاعلات\n• الأحماض والقواعد\n• المول والحسابات\n• الكيمياء الحيوية\n• أي موضوع كيميائي!'},
-  {k:['شكرا','شكراً','مشكور','thanks'],a:'🌟 على الرحب والسعة! أنا هنا دائماً لمساعدتك في أي سؤال كيميائي. 🌟'},
-  {k:['من انت','من أنت','تعريف'],a:'🤖 أنا كيميائي AI — مساعد ذكي متخصص في الكيمياء.\n\n• مدعوم بقاعدة معرفة شاملة\n• يمكن ربطي بـ Groq/Gemini API (في الإعدادات)\n• أجيب على أسئلتك في الكيمياء والعلوم\n\nيمكنك تغيير المزود من الإعدادات!'}
+  {k:['ذرة','الذرة','تركيب الذرة'],a:'🔬 الذرة أصغر وحدة بنائية للمادة. تتكون من:\n\n• النواة: بروتونات (+) ونيوترونات\n• الإلكترونات: تدور في مدارات (-)\n\nعدد البروتونات = العدد الذري.'},
+  {k:['جدول دوري','الجدول الدوري'],a:'📊 الجدول الدوري تنظيم للعناصر:\n\n• 118 عنصراً\n• مرتبة حسب العدد الذري\n• 7 دورات و18 مجموعة\n\nتصفح الجدول التفاعلي مع نماذج 3D!'},
+  {k:['رابطة','روابط','الرابطة'],a:'🔗 أنواع الروابط:\n\n1. أيونية: انتقال e (NaCl)\n2. تساهمية: مشاركة e (H₂O)\n3. فلزية: بين الفلزات\n4. هيدروجينية: ضعيفة'},
+  {k:['تفاعل','تفاعلات','معادلة'],a:'⚗️ التفاعل: إعادة ترتيب الذرات.\n\nالأنواع:\n• تكوين (A+B→AB)\n• تفكك (AB→A+B)\n• إحلال (A+BC→AC+B)\n• احتراق'},
+  {k:['حمض','أحماض','قاعدة','قواعد'],a:'🧪 الأحماض: تُعطي H⁺\nالقواعد: تستقبل H⁺ أو تُعطي OH⁻\n\nالتعادل: حمض + قاعدة → ملح + ماء'},
+  {k:['ph','pH'],a:'📏 pH = -log[H⁺]\n\n• pH<7 حمضي\n• pH=7 متعادل\n• pH>7 قاعدي\n\npOH = 14 - pH'},
+  {k:['مول','المول'],a:'⚖️ المول:\n\n• 1 مول = 6.022×10²³ جزيء\n• n = m / M\n• عدد الجزيئات = n × 6.022×10²³'},
+  {k:['تركيز','مولارية'],a:'💧 M = n/V\n\nM = (m/MW)/V\n\nاستخدم الآلة الحاسبة!'},
+  {k:['ماء','H2O','h2o'],a:'💧 H₂O: جزيء قطبي، زاوية 104.5°، كتلة 18.015 g/mol'},
+  {k:['حديد','Fe'],a:'🔴 Fe (26): فلز انتقالي، يدخل في الهيموغلوبين. اقرأ التفاصيل في "الكيمياء والانسان"'},
+  {k:['كيمياء حيوية','bio'],a:'🧬 الكيمياء الحيوية: تفاعلات الجسم.\n\nاقرأ البحث في قسم "الكيمياء والانسان"'},
+  {k:['انزيم','إنزيم'],a:'🔬 الإنزيمات: محفزات حيوية تسرّع التفاعل دون استهلاك.'},
+  {k:['dna','DNA'],a:'🧬 DNA: يحمل المعلومات الوراثية. سلسلة مزدوجة. A-T، G-C.'},
+  {k:['حسابات','حساب'],a:'🧮 n = m/M، M = n/V، جزيئات = n × 6.022×10²³'},
+  {k:['اتزان','توازن'],a:'⚖️ الاتزان: معدل أمامي = عكسي. Keq = [P]/[R]'},
+  {k:['قانون حفظ الكتلة'],a:'⚖️ المادة لا تفنى ولا تستحدث.'},
+  {k:['سلام','مرحبا','اهلا'],a:'👋 أهلاً! أنا كيميائي AI. اسأل عن: ذرة، تفاعل، حمض، pH، مول، أي موضوع كيميائي!'},
+  {k:['شكرا','thanks'],a:'🌟 على الرحب والسعة!'},
+  {k:['من انت','من أنت'],a:'🤖 أنا كيميائي AI، مساعدك الذكي في الكيمياء. يمكن تفعيلي بـ Groq أو Gemini من الإعدادات.'}
 ];
 
 let chatMessages = [];
 
 function initChat(){
   const saved = localStorage.getItem('chemChat');
-  if(saved){
-    try { chatMessages = JSON.parse(saved); } catch { chatMessages = []; }
-  }
+  if(saved){ try { chatMessages = JSON.parse(saved); } catch { chatMessages = []; } }
   if(!chatMessages.length){
-    chatMessages.push({role:'bot', text:'👋 أهلاً! أنا كيميائي AI، مساعدك الذكي في الكيمياء. كيف أستطيع مساعدتك اليوم؟\n\nيمكنك سؤالي عن:\n• الذرة والجدول الدوري\n• التفاعلات والروابط\n• الأحماض والقواعد\n• أي موضوع كيميائي', html:true});
+    chatMessages.push({role:'bot', text:'👋 أهلاً! أنا كيميائي AI. كيف أستطيع مساعدتك اليوم؟\n\nاسأل عن:\n• الذرة والجدول الدوري\n• التفاعلات والروابط\n• الأحماض والقواعد\n• أي موضوع كيميائي', html:true});
   }
   renderChat();
   updateAIStatus();
@@ -3136,7 +2919,7 @@ function updateAIStatus(){
   const s = JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}');
   const status = document.getElementById('ai-status');
   if(!status) return;
-  if(s.aiProvider === 'groq' && s.groqKey) status.textContent = '🟢 Groq AI — Llama 3.3';
+  if(s.aiProvider === 'groq' && s.groqKey) status.textContent = '🟢 Groq AI';
   else if(s.aiProvider === 'gemini' && s.geminiKey) status.textContent = '🟢 Google Gemini';
   else status.textContent = '🟢 جاهز — قاعدة معرفة داخلية';
 }
@@ -3194,7 +2977,7 @@ async function sendChat(){
     addChatMessage('bot', response, s.aiProvider && s.aiProvider !== 'internal');
   } catch(err){
     hideTyping();
-    addChatMessage('bot', '⚠️ حدث خطأ: ' + err.message + '\n\nسأجيب من قاعدة المعرفة الداخلية:\n\n' + getInternalResponse(text));
+    addChatMessage('bot', '⚠️ حدث خطأ: ' + err.message + '\n\nسأجيب من قاعدة المعرفة:\n\n' + getInternalResponse(text));
   }
 }
 
@@ -3214,53 +2997,123 @@ function hideTyping(){
 
 function getInternalResponse(q){
   const lower = q.toLowerCase().trim();
-  // Score each knowledge entry
   let best = null, bestScore = 0;
   KNOWLEDGE.forEach(k => {
     let score = 0;
     k.k.forEach(kw => {
       const kwl = kw.toLowerCase();
-      if(lower.includes(kwl)){
-        score += kwl.length * 2;
-      }
+      if(lower.includes(kwl)) score += kwl.length * 2;
     });
     if(score > bestScore){ bestScore = score; best = k; }
   });
   if(best && bestScore > 0) return best.a;
-  // Fallback
-  return `🤔 لم أجد إجابة دقيقة في قاعدة معرفتي الداخلية.\n\nجرّب:\n• إعادة صياغة السؤال\n• استخدام كلمات مفتاحية مثل: ذرة، تفاعل، حمض، pH، مول\n• أو شغّل الذكاء الاصطناعي الحقيقي من الإعدادات (Groq/Gemini المجاني)\n\nمع ذلك، إليك بعض المواضيع التي أعرفها جيداً:\n• الذرة والجدول الدوري\n• الروابط الكيميائية\n• التفاعلات والأحماض\n• المول والحسابات\n• الكيمياء الحيوية`;
+  return `🤔 لم أجد إجابة دقيقة.\n\nجرّب:\n• إعادة صياغة السؤال\n• كلمات مفتاحية: ذرة، تفاعل، حمض، pH، مول\n• أو شغّل الذكاء الاصطناعي الحقيقي من الإعدادات`;
 }
 
+/* ============================================================
+   🚀 callGroq — يجرب عدة نماذج تلقائياً
+   ============================================================ */
 async function callGroq(prompt, key){
-  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-    method: 'POST',
-    headers: {'Content-Type':'application/json','Authorization':'Bearer ' + key},
-    body: JSON.stringify({
-      model: 'llama-3.3-70b-versatile',
-      messages: [
-        {role:'system', content:'أنت كيميائي AI متخصص في الكيمياء. أجب بالعربية بشكل واضح ومفيد. كن دقيقاً علمياً.'},
-        {role:'user', content: prompt}
-      ],
-      temperature: 0.7,
-      max_tokens: 1024
-    })
-  });
-  if(!res.ok){ const t = await res.text(); throw new Error('Groq API: ' + res.status + ' — ' + t.slice(0, 100)); }
-  const data = await res.json();
-  return data.choices[0].message.content;
+  const models = [
+    'llama-3.3-70b-versatile',
+    'llama-3.1-70b-versatile',
+    'llama-3.1-8b-instant',
+    'mixtral-8x7b-32768',
+    'gemma2-9b-it'
+  ];
+  
+  const savedModel = JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}').groqModel;
+  if(savedModel && !models.includes(savedModel)) models.unshift(savedModel);
+  
+  let lastError = null;
+  
+  for(const model of models){
+    try {
+      const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json','Authorization':'Bearer ' + key},
+        body: JSON.stringify({
+          model: model,
+          messages: [
+            {role:'system', content:'أنت كيميائي AI متخصص في الكيمياء. أجب بالعربية بشكل واضح ومفيد. كن دقيقاً علمياً.'},
+            {role:'user', content: prompt}
+          ],
+          temperature: 0.7,
+          max_tokens: 1024
+        })
+      });
+      
+      if(res.ok){
+        const s = JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}');
+        s.groqModel = model;
+        localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
+        const data = await res.json();
+        return data.choices[0].message.content;
+      }
+      
+      const errText = await res.text();
+      lastError = `${model}: ${res.status}`;
+      
+      if(res.status === 401 || res.status === 403){
+        throw new Error('المفتاح غير صحيح أو منتهي الصلاحية');
+      }
+    } catch(e){
+      lastError = e.message;
+      if(e.message.includes('المفتاح')) throw e;
+    }
+  }
+  
+  throw new Error('جميع النماذج فشلت. آخر خطأ: ' + lastError);
 }
 
+/* ============================================================
+   🚀 callGemini — محدث لنماذج 2026
+   ============================================================ */
 async function callGemini(prompt, key){
-  const res = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=' + key, {
-    method: 'POST',
-    headers: {'Content-Type':'application/json'},
-    body: JSON.stringify({
-      contents: [{parts:[{text: 'أنت كيميائي AI متخصص في الكيمياء. أجب بالعربية بشكل واضح ومفيد.\n\nالسؤال: ' + prompt}]}]
-    })
-  });
-  if(!res.ok){ const t = await res.text(); throw new Error('Gemini API: ' + res.status + ' — ' + t.slice(0, 100)); }
-  const data = await res.json();
-  return data.candidates[0].content.parts[0].text;
+  const models = [
+    'gemini-2.5-flash',
+    'gemini-2.5-flash-lite',
+    'gemini-2.0-flash',
+    'gemini-2.0-flash-lite',
+    'gemini-flash-latest'
+  ];
+  
+  const savedModel = JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}').geminiModel;
+  if(savedModel && !models.includes(savedModel)) models.unshift(savedModel);
+  
+  let lastError = null;
+  
+  for(const model of models){
+    try {
+      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`, {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+          contents: [{parts:[{text: 'أنت كيميائي AI متخصص في الكيمياء. أجب بالعربية بشكل واضح ومفيد.\n\nالسؤال: ' + prompt}]}]
+        })
+      });
+      
+      if(res.ok){
+        const s = JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}');
+        s.geminiModel = model;
+        localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
+        const data = await res.json();
+        return data.candidates[0].content.parts[0].text;
+      }
+      
+      const errText = await res.text();
+      lastError = `${model}: ${res.status}`;
+      
+      if(res.status === 401 || res.status === 403){
+        throw new Error('المفتاح غير صحيح أو منتهي الصلاحية');
+      }
+    } catch(e){
+      lastError = e.message;
+      if(e.message.includes('المفتاح')) throw e;
+    }
+  }
+  
+  throw new Error('جميع النماذج فشلت. آخر خطأ: ' + lastError);
 }
 
 function openAISettings(){ openAIModal(); }
@@ -3307,9 +3160,6 @@ function confirmModal(title, msg, onConfirm){
 }
 function closeModal(){ document.getElementById('modal-overlay').classList.remove('active'); }
 
-/* ============================================================
-   ⌨️ Keyboard Shortcuts
-   ============================================================ */
 document.addEventListener('keydown', function(e){
   if(document.getElementById('quiz').classList.contains('active')){
     const opts = document.querySelectorAll('.option');
@@ -3322,20 +3172,9 @@ document.addEventListener('keydown', function(e){
     const map = {'1':0,'2':1,'3':2,'4':3};
     if(map[e.key] !== undefined && opts[map[e.key]]) opts[map[e.key]].click();
   }
-  if(document.getElementById('ai-assistant')?.classList.contains('active')){
-    if(e.key === 'Enter' && document.activeElement?.id !== 'chat-input') return;
-  }
-  // Escape closes modals
-  if(e.key === 'Escape'){
-    closeModal();
-    closeElement3D();
-    closeAIModal();
-  }
+  if(e.key === 'Escape'){ closeModal(); closeElement3D(); closeAIModal(); }
 });
 
-/* ============================================================
-   🚀 Init
-   ============================================================ */
 window.addEventListener('hashchange', handleRoute);
 window.addEventListener('load', function(){
   loadSettings();
